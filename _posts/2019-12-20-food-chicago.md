@@ -23,9 +23,11 @@ Here's a useless table:
 | Seven | Eight | Six |
 | Two | Three | One |
 
-test2
+test3
 
-<iframe src="https://github.com/clairebilat/forensic-data-stories/blob/master/frames/timtest.html"></iframe>
+<div>
+  <iframe src="https://github.com/clairebilat/forensic-data-stories/blob/master/frames/timtest.html"></iframe>
+</div>
 
 How about a yummy crepe?
 
