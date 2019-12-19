@@ -3,7 +3,7 @@ layout: post
 title: Eat safely in Chicago
 subtitle: A short data analysis of the Chicago Food Inspections Database
 gh-repo: clairebilat/forensic-data-stories
-gh-badge: [star, fork, follow]
+gh-badge: [star, follow]
 tags: [crime, food, chicago]
 comments: true
 ---
