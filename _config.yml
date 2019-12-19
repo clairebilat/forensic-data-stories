@@ -24,7 +24,7 @@ navbar-links:
   Resources:
     #- Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     #- Learn markdown: "http://www.markdowntutorial.com/"
-    - Our notebook: "https://github.com/clairebilat/ada-2019-project-lost-and-found"
+    - Our Chicago notebook: "https://github.com/clairebilat/ada-2019-project-lost-and-found"
     - The Chicago Food Inspections Database: "http://dev.cityofchicago.org/open%20data/data%20portal/2018/06/29/food-violations-changes.html"
     - The Crimes in Chicago Databse: "https://www.kaggle.com/currie32/crimes-in-chicago"
     - The Chicago Business Licenses and Owners Database: "https://www.kaggle.com/chicago/chicago-business-licenses-and-owners"
