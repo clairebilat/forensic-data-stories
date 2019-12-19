@@ -8,7 +8,9 @@ tags: [crime, food, chicago]
 comments: true
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+# Abstract
+
+We are four students decided to complete a [master's degree in Digital Investigation and Identification] (https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, we found ourselves trying to make a success of an EPFL course "Applied Data Analysis". We were asked to developp a project under the theme *data science for social good*. A variety of datasets were provided by the course's organisators including the [Chicago Food Inspections Database] (http://dev.cityofchicago.org/open%20data/data%20portal/2018/06/29/food-violations-changes.html), which we selected for our project. However, as forensic sciences students, we could not miss the opportunity to make everything about criminology, which led to this study, where the correlation between the number of crimes committed and the hygiene of the food establishments in a community area will be analysed (among other various things).
 
 **Here is some bold text**
 
