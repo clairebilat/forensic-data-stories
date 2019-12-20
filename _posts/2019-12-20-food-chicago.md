@@ -95,7 +95,9 @@ We took the mean and not the sum because the distribution of inspections within 
 
 **Limits** : An important point is to pay attention to the *number of inspected establishments* compared to *the total number of establishments*. It is certain than the variations of this ratio between the community areas has an impact on the results.
 
-## The Crimes in Chicago Database : the `Crime score`
+## The Crimes in Chicago Database
+
+### The `Crime score`
 
 In order to compute the **crime score** of a community area, we first computed the crime score of a reporterd crime. To do so, we took into account the crime's minimum sentence (in term of years of imprisonment) provided by the Illinois Penalty Code. For the crimes where the minimum sentence is not imprisonment, we fixed the crime score to 0,1. 
 
