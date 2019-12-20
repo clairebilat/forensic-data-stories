@@ -98,10 +98,16 @@ The **hygiene score of an establishment, per year** is defined by **the mean of 
 
 The **hygiene score of a community area, per year** is defined by **the mean of the hygiene scores from every inspections that took place within the year in the particular area**.
 
+We took the mean and not the sum because the distribution of inspections within the different community areas is not homogen and we could not assume that the ratio between inspected and uninspected establishments is the same for each community area.
+
 ## 2.2 The Crimes in Chicago Database : the `Crime score`
 
 In order to compute the **crime score** of a community area, we first computed the crime score of a reporterd crime. To do so, we took into account the crime's minimum sentence (in term of years of imprisonment) provided by the Illinois Penalty Code. For the crimes where the minimum sentence is not imprisonment, we fixed the crime score to 0,1. 
 
 The **crime score of a community area, per year** is defined by **the sum of the crime scores from every crimes reported within the year in the particular area**.
+
+Here we took the sum because we assumed that there was no huge difference between the ratios of reported vs unreported crimes for each community area.
+
+# 3. Results
 
 
