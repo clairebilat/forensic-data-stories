@@ -16,7 +16,7 @@ comments: true
 
 ## 1.1 About us
 
-We are four students decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, we found ourselves trying to make a success of an EPFL course intituled "Applied Data Analysis". We were asked to developp a project under the theme *data science for social good*. A variety of datasets were provided by the course's organisators including the [Chicago Food Inspections Database](http://dev.cityofchicago.org/open%20data/data%20portal/2018/06/29/food-violations-changes.html), which we selected for our project. However, as forensic sciences students, we could not miss the opportunity to make everything about criminology, which ultimately led to this study. We indeed added a [database of the crimes in Chicago](https://www.kaggle.com/currie32/crimes-in-chicago) in order to analyse the correlation, for a given community area in Chicago, between the number of crimes committed and the hygiene of the food establishments (among other various things).
+We are four students who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, we found ourselves trying to make a success of an EPFL course intituled "Applied Data Analysis". We were asked to developp a project under the theme *data science for social good*. A variety of datasets were provided by the course's organisators including the [Chicago Food Inspections Database](http://dev.cityofchicago.org/open%20data/data%20portal/2018/06/29/food-violations-changes.html), which we selected for our project. However, as forensic sciences students, we could not miss the opportunity to make everything about criminology, which ultimately led to this study. We indeed added a [database of the crimes in Chicago](https://www.kaggle.com/currie32/crimes-in-chicago) in order to analyse the correlation, for a given community area in Chicago, between the number of crimes committed and the hygiene of the food establishments (among other various things).
 
 ## 1.2 About the databases used
 
@@ -46,14 +46,14 @@ More about the exact distribution of those facility groups will be explained lat
 
 Some other research questions were added to the project :
 - About the **hygiene score** :
-  - Are their significant differences of hygiene scores between the community areas ?
+  - Are they significant differences of hygiene scores between the community areas ?
   - How is the evolution over time ?
   - Which group of facilities has better hygiene score ?
-  - Are their significant differences of hygiene scores between the *private* and the *public* establishments ?
+  - Are they significant differences of hygiene scores between the *private* and the *public* establishments ?
   
 - About the **management** of food establishments :
-  - Is their a relation between the number of establishments that an owner has and the hygiene scores obtained ?
-  - Is their a relation between a  specific owner and the hygiene score of his establishments ?
+  - Is there a relation between the number of establishments that an owner has and the hygiene scores obtained ?
+  - Is there a relation between a  specific owner and the hygiene score of his establishments ?
  
 ### 1.3.2 Limits
 
