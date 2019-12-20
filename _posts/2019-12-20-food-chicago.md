@@ -111,9 +111,9 @@ Here we took the sum because we assumed that there was no huge difference betwee
 
 # 3. Results and discussion
 
-## 1. HygieneScores / Community Area
+## 3.1. HygieneScores / Community Area
 
-### General Visualization
+### 3.1.1 General Visualization
 
 The following figure allows to visualize the `HygieneScores` per `Year` for each `Community Area`. It is possible to unselect the year we don't want to display clicking on its label on the right of the figure. The *Mean* line helps to see the bars tending to deviate from the `Median` computed. 
 
@@ -159,7 +159,7 @@ To conclude, the result of the correlation computation is in accordance with the
 
 **Considering the constant variations in the food domain, the results obtained could simply indicated that the inspections are fair, following the phenomenon of changes, unpredictable due to the behaviors in the restauration industry.**
 
-N.B. : For the case of the 47th Community Area of Chicago, called Burnside, https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1 explains that it has known the *White Flight* phenomenon (https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also that it is situated on the border of the city and is a "comfortable residential community". 
+N.B. : For the case of the 47th Community Area of Chicago, called Burnside, explains that it has known the [*White Flight* phenomenon](https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also that it is situated on the border of the city and is a "comfortable residential community". [Source : wikipedia](https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1)
 
 The low `HygieneScores` could either be explained by a smallest number of establishments with correct `HygieneScores` running in a zone whose comfort could ease the maintenance of the establishments. 
 
@@ -223,7 +223,7 @@ We can also see that one community area particularly stands out every year (exce
 
 Considering the previous results in the `HygieneScores` sections, this rise cannot be explain by our analysis of the *Chicago Food Inspections* yet, but it already has been discussed. Quickly searching on Google, many articles relate this trend : 
 
-"The city's overall crime rate, especially the violent crime rate, is higher than the US average. Chicago was responsible for nearly half of 2016's increase in homicides in the US, though the nation's crime rates remain near historic lows. The reasons for the higher numbers in Chicago remain unclear." - https://en.wikipedia.org/wiki/Crime_in_Chicago
+"The city's overall crime rate, especially the violent crime rate, is higher than the US average. Chicago was responsible for nearly half of 2016's increase in homicides in the US, though the nation's crime rates remain near historic lows. The reasons for the higher numbers in Chicago remain unclear." - [Source : wikipedia](https://en.wikipedia.org/wiki/Crime_in_Chicago)
 
 Apparently, their analysis of the *Chicago Food Inspections* could not have explained it either.
 
