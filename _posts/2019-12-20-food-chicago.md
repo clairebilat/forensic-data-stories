@@ -26,7 +26,25 @@ The fourth and last dataset used for this project is the [Geographic Boundaries 
 
 ## 1.3 About this project
 
-The main research question was : **where to eat safely in Chicago ?**
+### 1.3.1 Research questions
+
+The main research question was : **where to eat *safely* in Chicago ?**
+
+The adjective `safely` has been chosen wisely because it has multiple meanings: you can eat in a `safe` way making sure that the establishment where you go respects particular **hygiene rules**, but also that the place is `safe` according to the **crime rate** of its district. That said, two scores has been computed per community area : their **hygiene score** based on the food inspections performed in the area and their **crime score** based on the incidents of crime reported in the area. More about the exact calculation of those two scores will be explained later. 
+
+It has been decided that additionally to the **geographic component** of the analysis (based on the geographic delimitations of the community areas) a **temporal component** would be taken into account. Indeed, the field of restoration is known to be in a constant evolution : each year, many establishments are opening while other are closing or changing of owner - especially in big cities. This is why the different calculations and comparisons has been done by year. Also, the main research question (*where to eat* safely *in Chicago*) has been given based on the latest data, considering that it would be the most useful. 
+
+Some other research questions were added to the project :
+- About the **hygiene score** :
+ - Are their significant differences of hygiene scores between the community areas ?
+ - How is the evolution over time ?
+- About the **management** of food establishments :
+ - Is their a relation between the number of establishments that an owner has and the hygiene scores obtained ?
+ - In which way a change of owner changes the hygiene score of an establishment ?
+ 
+### 1.3.2 Limits
+
+An important point is to pay attention to the *number of inspected establishments* compared to *the total number of establishments*. It is certain than the variations of this ratio between the community areas has an impact on the results. An explanation of the variations should be purposed. In order to give a complete answer to the main research question, the uninspected establishments have to be taken into account.
 
 
 
