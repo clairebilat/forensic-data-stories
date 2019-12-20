@@ -44,11 +44,12 @@ Some other research questions were added to the project :
 - About the **hygiene score** :
   - Are their significant differences of hygiene scores between the community areas ?
   - How is the evolution over time ?
+  - Which group of facilities has better hygiene score ?
   - Are their significant differences of hygiene scores between the *private* and the *public* establishments ?
   
 - About the **management** of food establishments :
   - Is their a relation between the number of establishments that an owner has and the hygiene scores obtained ?
-  - In which way a change of owner changes the hygiene score of an establishment ?
+  - Is their a relation between a  specific owner and the hygiene score of his establishments ?
  
 ### 1.3.2 Limits
 
@@ -62,7 +63,7 @@ This part of our project is not the most thrilling so we will not go over every 
 
 ### 2.1.1 The `Facility group`
 
-The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for the purpose of our project. As explained before, we created two main categories, *private* and *public* establishments, containing a few costum **facility groups** into which the facility types of interest are distributed. Those facility groups are listed below.
+The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for the purpose of our project. As explained before, we created two main categories, *private* and *public* establishments, containing a few custom **facility groups** into which the facility types of interest are distributed. Those facility groups are listed below.
 
 - *private* facility groups :
     - restaurant
@@ -108,6 +109,8 @@ The **crime score of a community area, per year** is defined by **the sum of the
 
 Here we took the sum because we assumed that there was no huge difference between the ratios of reported vs unreported crimes for each community area.
 
-# 3. Results
+# 3. Results and discussion
+
+# 4. Conclusion
 
 
