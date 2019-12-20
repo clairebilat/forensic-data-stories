@@ -16,13 +16,13 @@ We are four students decided to complete a [master's degree in Digital Investiga
 
 ## 1.2 About the databases used
 
-The first dataset that we used is the Chicago Food Inspections Database linked above and provided by the Chicago department of Public Health's Food Protection Program. It contains informations regarding the inspection reports of food establishments in Chicago from 2010 to the present. Some informations are directly linked to the establishments like their exact location, their type (restaurants, coffee shop, ...) or their license number. Some other informations document the inspections realized like their result (pass, fail, ...) or the violations noticed.
+The first dataset that we used is the **Chicago Food Inspections Database** linked above and provided by the Chicago department of Public Health's Food Protection Program. It contains informations regarding the inspection reports of food establishments in Chicago from 2010 to the present. Some informations are directly linked to the establishments like their exact location, their type (restaurants, coffee shop, ...) or their license number. Some other informations document the inspections realized like their result (pass, fail, ...) or the violations noticed.
 
-The second dataset used for this project is the Crimes in Chicago Database also linked above and provided by the Chicago Police Department's Citizen Law Enforcement Analysis and Reporting. It contains informations regarding the reported incidents of crime that occured in Chicago from 2001 to present, like the primary type of the crime (homicide, burglary...) or its anonymized location.
+The second dataset used for this project is the **Crimes in Chicago Database** also linked above and provided by the Chicago Police Department's Citizen Law Enforcement Analysis and Reporting. It contains informations regarding the reported incidents of crime that occured in Chicago from 2001 to present, like the primary type of the crime (homicide, burglary...) or its anonymized location.
 
-The third dataset used for this projet is the [Chicago Business Licenses and Owners Database](https://www.kaggle.com/chicago/chicago-business-licenses-and-owners) provided by the City of Chicago. It contains informations about the owners of establishments in Chicago and allowed us to link the food establishments of the first dataset to their respective owners.
+The third dataset used for this projet is the **[Chicago Business Licenses and Owners Database](https://www.kaggle.com/chicago/chicago-business-licenses-and-owners)** provided by the City of Chicago. It contains informations about the owners of establishments in Chicago and allowed us to link the food establishments of the first dataset to their respective owners.
 
-The fourth and last dataset used for this project is the [Geographic Boundaries of Community Areas in Chicago Database](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6) provided by the City of Chicago. This dataset allowed us to link the food establishments of the first dataset to their respective community areas.
+The fourth and last dataset used for this project is the **[Geographic Boundaries of Community Areas in Chicago Database](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6)** provided by the City of Chicago. This dataset allowed us to link the food establishments of the first dataset to their respective community areas.
 
 ## 1.3 About this project
 
@@ -48,13 +48,10 @@ An important point is to pay attention to the *number of inspected establishment
 
 # 2. Preprocessing
 
-This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. 
+This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to the project notebook if you have a insatiable curiosity about it.
 
-- About the 
+## 2.1 The Chicago Food Inspections Database
+
+## 2.2 The Crimes in Chicago Database
 
 
-
-<div>
- <iframe src="https://github.com/clairebilat/forensic-data-stories/blob/master/frames/timtest2.html" name="test" width="500" height="300">
- </iframe>
-</div>
