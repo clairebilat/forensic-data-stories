@@ -90,7 +90,7 @@ In order to compute the **hygiene score** of a community area, we first computed
 
 The formula used to compute the hygiene score of an inspection is the following :
 
-![img](http://www.sciweavers.org/tex2img.php?eq=NumberViolations%20%2B%20InpsectionResult%5E3%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0){: .center-block :}
+![img]([img]http://www.sciweavers.org/tex2img.php?eq=NumberViolations%20%2B%20InspectionResult%5E3%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0[/img]){: .center-block :}
 
 
 ## 2.2 The Crimes in Chicago Database
