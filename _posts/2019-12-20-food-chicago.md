@@ -28,7 +28,7 @@ The fourth and last dataset used for this project is the [Geographic Boundaries 
 
 What has been studied 
 
-<iframe src="https://github.com/clairebilat/forensic-data-stories/blob/master/frames/timtest2.html" 
- name="test" width="50"
- height="30">
+<div>
+ <iframe src="https://github.com/clairebilat/forensic-data-stories/blob/master/frames/timtest2.html" name="test" width="500" height="300">
  </iframe>
+</div>
