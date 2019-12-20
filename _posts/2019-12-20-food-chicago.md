@@ -94,6 +94,10 @@ $ \[ Hygiene score = Number of violations x Inspection's result^3 \]
 
 $ \sum_{Number of violations}{Inpsection's result^{2}} $ 
 
+\begin{equation}
+Hygiene score = Number of violations x Inspection's result^3
+\end{equation}
+
 ## 2.2 The Crimes in Chicago Database
 
 
