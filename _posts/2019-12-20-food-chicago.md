@@ -90,9 +90,18 @@ In order to compute the **hygiene score** of a community area, we first computed
 
 The formula used to compute the hygiene score of an inspection is the following :
 
-![img]([img]http://www.sciweavers.org/tex2img.php?eq=NumberViolations%20%2B%20InspectionResult%5E3%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0[/img]){: .center-block :}
+![img](http://www.sciweavers.org/tex2img.php?eq=InspectionHygieneScore%20%3D%20NumberViolationsInspection%20%2A%20InspectionResult%5E3%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0){: .center-block :}
 
+We gave much more weight to the result of the inspection because there are some violations more serious than others which can cause some biais : an establishment could fail its inspection by violating only one serious hygiene rule and another establishment could pass its inspection (with conditions) by violating two or more less serious hygiene rules.
 
-## 2.2 The Crimes in Chicago Database
+The **hygiene score of an establishment, per year** is defined by **the mean of the hygiene scores from every inspections performed within the year in the particular establishment.
+
+The **hygiene score of a community area, per year** is defined by **the mean of the hygiene scores from every inspections that took place within the year in the particular area**.
+
+## 2.2 The Crimes in Chicago Database : the `Crime score`
+
+In order to compute the **crime score** of a community area, we first computed the crime score of a reporterd crime. To do so, we took into account the crime's minimum sentence (in term of years of imprisonment) provided by the Illinois Penalty Code. For the crimes where the minimum sentence is not imprisonment, we fixed the crime score to 0,1. 
+
+The **crime score of a community area, per year** is defined by **the sum of the crime scores from every crimes reported within the year in the particular area**.
 
 
