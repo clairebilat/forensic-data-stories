@@ -114,11 +114,7 @@ Here we took the sum because we assumed that there was no huge difference betwee
 # 4. Conclusion
 
 
-#styles: 
-  #.iframe-container {overflow: hidden; padding-top: 56.25%; position: relative;}
-  #.iframe-container iframe {border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;}
-  
-  
-<div class="iframe-container">
+
+<div>
   <iframe src="/frames_agathe/Corr_eat.html"></iframe>
 </div>
