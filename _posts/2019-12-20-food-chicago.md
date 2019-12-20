@@ -56,7 +56,7 @@ An important point is to pay attention to the *number of inspected establishment
 
 # 2. Preprocessing
 
-This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[our project notebook](https://github.com/clairebilat/ada-2019-project-lost-and-found)** if you have a insatiable curiosity about it.
+This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[our project notebook](https://github.com/clairebilat/ada-2019-project-lost-and-found)** if you have an insatiable curiosity about it.
 
 ## 2.1 The Chicago Food Inspections Database
 
@@ -74,6 +74,7 @@ The Database contains informations about the facility type of the establishments
     - liquor restaurant
     - catering
     - golden diner
+    
  - *public* facility groups :
      - day care
      - school
