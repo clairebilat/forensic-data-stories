@@ -141,7 +141,7 @@ We have also plotted the `HygieneScores` in descending order, to see if the orde
 Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
 
 
-{% include eat_map_2010.html %}
+ include eat_map_2010.html 
 
 
 As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **no particular trend** which ends up being a **particular trend*.
@@ -212,7 +212,7 @@ What we can already see is that the `CrimeScore` are very different **inter**-`C
 Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
 
 
-{% include crime_map_2010.html %}
+ include crime_map_2010.html 
 ...
 
 
