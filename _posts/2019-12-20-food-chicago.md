@@ -119,8 +119,7 @@ The following figure allows to visualize the `HygieneScores` per `Year` for each
 
 
 {% include HygieneScore_ComArea_Bars.html %}
-
-*unselect the years you don't want to display by clicking on their label on the right of the figure*
+*unselect the years you don't want to display by clicking on their label on the right*
 
 What we can see is that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*.
 
