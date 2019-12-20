@@ -34,10 +34,17 @@ The adjective `safely` has been chosen wisely because it has multiple meanings: 
 
 It has been decided that additionally to the **geographic component** of the analysis (based on the geographic delimitations of the community areas) a **temporal component** would be taken into account. Indeed, the field of restoration is known to be in a constant evolution : each year, many establishments are opening while other are closing or changing of owner - especially in big cities. This is why the different calculations and comparisons has been done by year. Also, the main research question (*where to eat* safely *in Chicago*) has been given based on the latest data, considering that it would be the most useful. 
 
+It has also been decided to distribute the facility types into **facility groups** that fall into two main categories :
+- The *private* establishments, where it is possible to eat a main course (for example, the places where you can only eat an ice cream    were deleted of our list).
+- The *public* establishments like school cafeterias and hospitals.
+More about the exact distribution of those facility groups will be explained later.
+
 Some other research questions were added to the project :
 - About the **hygiene score** :
   - Are their significant differences of hygiene scores between the community areas ?
   - How is the evolution over time ?
+  - Are their significant differences of hygiene scores between the *private* and the *public* establishments ?
+  
 - About the **management** of food establishments :
   - Is their a relation between the number of establishments that an owner has and the hygiene scores obtained ?
   - In which way a change of owner changes the hygiene score of an establishment ?
@@ -48,9 +55,13 @@ An important point is to pay attention to the *number of inspected establishment
 
 # 2. Preprocessing
 
-This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to the project notebook if you have a insatiable curiosity about it.
+This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[our project notebook](https://github.com/clairebilat/ada-2019-project-lost-and-found)** if you have a insatiable curiosity about it.
 
 ## 2.1 The Chicago Food Inspections Database
+
+### 2.1.1 The column `Facility group`
+
+The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for us 
 
 ## 2.2 The Crimes in Chicago Database
 
