@@ -90,13 +90,8 @@ In order to compute the **hygiene score** of a community area, we first computed
 
 The formula used to compute the hygiene score of an inspection is the following :
 
-$ \[ Hygiene score = Number of violations x Inspection's result^3 \]
+![img](http://www.sciweavers.org/tex2img.php?eq=NumberViolations%20%2B%20InpsectionResult%5E3%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0){: .center-block :}
 
-$ \sum_{Number of violations}{Inpsection's result^{2}} $ 
-
-\begin{equation}
-Hygiene score = Number of violations x Inspection's result^3
-\end{equation}
 
 ## 2.2 The Crimes in Chicago Database
 
