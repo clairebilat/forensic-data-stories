@@ -141,8 +141,7 @@ We have also plotted the `HygieneScores` in descending order, to see if the orde
 Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
 
 
- include eat_map_2010.html 
-
+![img](https://github.com/clairebilat/forensic-data-stories/blob/master/img/eat_map_2010.PNG){: .center-block :}
 
 As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **no particular trend** which ends up being a **particular trend*.
 
@@ -212,8 +211,9 @@ What we can already see is that the `CrimeScore` are very different **inter**-`C
 Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
 
 
- include crime_map_2010.html 
-...
+![img](https://github.com/clairebilat/forensic-data-stories/blob/master/img/crime_map_2010.PNG){: .center-block :}
+
+---
 
 
 As we can see from the maps, the crime score stays more or less stable with a slight decrease from 2010 to 2015. In 2017, as on the figure 4.1, we can observe very low crime scores everywhere. As we read nothing that could explain this, we think it is an issue in the dataset, maybe a non-complet dataset for this year.
