@@ -115,11 +115,12 @@ Here we took the sum because we assumed that there was no huge difference betwee
 
 ### 3.1.1 General Visualization
 
-The following figure allows to visualize the `HygieneScores` per `Year` for each `Community Area`. It is possible to unselect the year we don't want to display clicking on its label on the right of the figure. The *Mean* line helps to see the bars tending to deviate from the `Median` computed. 
+The following figure allows to visualize the `HygieneScores` per `Year` for each `Community Area`. The *Mean* line helps to see the bars tending to deviate from the `Median` computed. 
 
 
 {% include HygieneScore_ComArea_Bars.html %}
 
+*unselect the years you don't want to display by clicking on their label on the right of the figure*
 
 What we can see is that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*.
 
