@@ -91,7 +91,7 @@ In order to compute the **hygiene score** of a community area, we first computed
 
 The formula used to compute the hygiene score of an inspection is the following :
 
-![img](https://github.com/clairebilat/forensic-data-stories/blob/master/img/equation.png){: .center-block :}
+<img src="{{site.github.url}}/assets/img/equation.png">
 
 We gave much more weight to the result of the inspection because there are some violations more serious than others which can cause some biais : an establishment could fail its inspection by violating only one serious hygiene rule and another establishment could pass its inspection (with conditions) by violating two or more less serious hygiene rules.
 
@@ -141,7 +141,7 @@ We have also plotted the `HygieneScores` in descending order, to see if the orde
 Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
 
 
-![img](https://github.com/clairebilat/forensic-data-stories/blob/master/img/eat_map_2010.PNG){: .center-block :}
+<img src="{{site.github.url}}/assets/img/eat_map_2017.PNG">
 
 As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **no particular trend** which ends up being a **particular trend*.
 
@@ -211,7 +211,7 @@ What we can already see is that the `CrimeScore` are very different **inter**-`C
 Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
 
 
-![img](https://github.com/clairebilat/forensic-data-stories/blob/master/img/crime_map_2010.PNG){: .center-block :}
+<img src="{{site.github.url}}/assets/img/crime_map_2016.PNG">
 
 ---
 
