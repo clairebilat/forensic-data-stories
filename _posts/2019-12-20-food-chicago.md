@@ -35,25 +35,21 @@ The adjective `safely` has been chosen wisely because it has multiple meanings: 
 It has been decided that additionally to the **geographic component** of the analysis (based on the geographic delimitations of the community areas) a **temporal component** would be taken into account. Indeed, the field of restoration is known to be in a constant evolution : each year, many establishments are opening while other are closing or changing of owner - especially in big cities. This is why the different calculations and comparisons has been done by year. Also, the main research question (*where to eat* safely *in Chicago*) has been given based on the latest data, considering that it would be the most useful. 
 
 It has also been decided to distribute the facility types into **facility groups** that fall into two main categories :
-- The *private* establishments, where it is possible to eat a main course (for example, the places where you can only eat an ice cream    were deleted of our list).
-- The *public* establishments like school cafeterias and hospitals.
+- The *private* establishments, where it is possible to eat a main course (for example, the places where you can only eat an ice cream    were deleted of our list)
+- The *public* establishments like school cafeterias and hospitals
 
-More about the exact distribution of those facility groups will be explained later.
+More about the exact distribution of those `Facility Groups` will be explained later.
 
 Some other research questions were added to the project :
-- About the **hygiene score** :
-  - Are they significant differences of hygiene scores between the community areas ?
+- About the `HygieneScores` :
+  - Are they significant differences of Hygiene Scores between the community areas ?
   - How is the evolution over time ?
   - Which group of facilities has better hygiene score ?
-  - Are they significant differences of hygiene scores between the *private* and the *public* establishments ?
+  - Are they significant differences of Hygiene scores between the *private* and the *public* establishments ?
   
-- About the **management** of food establishments :
+- About the *management* of food establishments :
   - Is there a relation between the number of establishments that an owner has and the hygiene scores obtained ?
-  - Is there a relation between a  specific owner and the hygiene score of his establishments ?
  
-### Limits
-
-An important point is to pay attention to the *number of inspected establishments* compared to *the total number of establishments*. It is certain than the variations of this ratio between the community areas has an impact on the results. An explanation of the variations should be purposed. In order to give a complete answer to the main research question, the uninspected establishments have to be taken into account.
 
 # Preprocessing
 
@@ -65,18 +61,14 @@ This part of our project is not the most thrilling so we will not go over every 
 
 The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for the purpose of our project. As explained before, we created two main categories, *private* and *public* establishments, containing a few custom **facility groups** into which the facility types of interest are distributed. Those facility groups are listed below.
 
-- *private* facility groups :
-    - restaurant
-    - grocery restaurant
-    - banquet
-    - rooftop restaurant
-    - bar restaurant
-    - bakery restaurant
-    - liquor restaurant
-    - catering
+*private* facility groups :
+    - restaurant                      - grocery restaurant
+    - banquet                         - rooftop restaurant
+    - bar restaurant                  - bakery restaurant
+    - liquor restaurant               - catering
     - golden diner
     
- - *public* facility groups :
+ *public* facility groups :
      - day care
      - school
      - childrens services
@@ -100,6 +92,8 @@ The **hygiene score of an establishment, per year** is defined by **the mean of 
 The **hygiene score of a community area, per year** is defined by **the mean of the hygiene scores from every inspections that took place within the year in the particular area**.
 
 We took the mean and not the sum because the distribution of inspections within the different community areas is not homogen and we could not assume that the ratio between inspected and uninspected establishments is the same for each community area.
+
+**Limits** : An important point is to pay attention to the *number of inspected establishments* compared to *the total number of establishments*. It is certain than the variations of this ratio between the community areas has an impact on the results.
 
 ## The Crimes in Chicago Database : the `Crime score`
 
@@ -239,8 +233,6 @@ The **corr** function gives the Pearson Coefficient between the `CrimeScores` an
 
 **The CrimeScore appears to be very related to the place.**
 
-**DIRE QUELQUE CHOSE D'UN PEU CRIMINO ??**
-
 ---
 
 # Hygiene versus Crime
@@ -249,13 +241,9 @@ The **corr** function gives the Pearson Coefficient between the `CrimeScores` an
 
 The difference of the trends detected between `HygieneScores` and `CrimeScores` strongly lead to think that there is no correlation between the two. Using the **.corr()** function, we obtained the result : **PCC = -0.3059226707490215**
 
-### Conclusion :
-**The CrimeScore and the HygieneScore are not correlated following the Pearson method.**
+**The CrimeScore and the HygieneScore are not correlated following the Pearson method. In our opinion, this result is a very good point :
 
-**In our opinion, this result is a very good point :
 **- Even if in some Community Areas the CrimeScore and therefore the level of criminality is very high, it doesn't impact the food establishments of the place
+
 **- The Chicago department of Public Health's Food Protection Program works the same way no matter the Community Area : it is generallly not the fault of the people who want to run food establishments if the criminiality level is high, so they should not be penalized by it.
 ---
-
-# 6. Summary
-
