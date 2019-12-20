@@ -12,7 +12,7 @@ comments: true
 #    self_contained: no
 ---
 
-# 1. Introduction
+# 1. Prologue
 
 ## 1.1 About us
 
@@ -115,5 +115,160 @@ Here we took the sum because we assumed that there was no huge difference betwee
 
 # 3. Results and discussion
 
-# 4. Conclusion
+## 1. HygieneScores / Community Area
+
+### General Visualization
+
+The following figure allows to visualize the `HygieneScores` per `Year` for each `Community Area`. It is possible to unselect the year we don't want to display clicking on its label on the right of the figure. The *Mean* line helps to see the bars tending to deviate from the `Median` computed. 
+
+
+[1.1 HygieneScore_ComArea_Bars.html]
+
+
+What we can see is that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*.
+
+The entry which really is above the rest is the `Community Area` **47** with a Median at *4*, except in 2013, it has low `HygieneScores`. 
+
+### Visualization Year By Year
+
+The following figure allows to visualize the results in another way - each bar contains all the `HygieneScores` of the `Community Areas`. 
+
+
+[1.2 HygieneScore_ComArea_2.html]
+
+
+Zooming on few `Community Areas`, we can notice again that the repartition for each `Year` seems to be *random*. 
+
+We have also plotted the `HygieneScores` in descending order, to see if the order of the `Community Areas` could learn us something : neither the top 10 nor the bottom 10 are alike, except for the **47th** `Community Area` which stays at the top 1 - getting the *lowest* scores so the best results.
+
+
+Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
+
+
+[1.3 eat_map_2010.html]
+
+
+As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **no particular trend** which ends up being a **particular trend*.
+
+### Correlation
+
+The **.corr()** function gives the pearson coefficient between the `HygieneScores` and the `Community Areas`.¨
+
+
+[1.4 Corr_eat.html]
+
+
+To conclude, the result of the correlation computation is in accordance with the rest of the analysis : there is no relation between the `HygieneScore` and the `Community Areas`.
+
+### Conclusion
+
+**Considering the constant variations in the food domain, the results obtained could simply indicated that the inspections are fair, following the phenomenon of changes, unpredictable due to the behaviors in the restauration industry.**
+
+N.B. : For the case of the 47th Community Area of Chicago, called Burnside, https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1 explains that it has known the *White Flight* phenomenon (https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also that it is situated on the border of the city and is a "comfortable residential community". 
+
+The low `HygieneScores` could either be explained by a smallest number of establishments with correct `HygieneScores` running in a zone whose comfort could ease the maintenance of the establishments. 
+
+---
+
+## 2. HygieneScores / Facility Type
+
+The data also give the `Facility Type` of each establishments. As explained at the begining of our story, they have been put into groups in order to obtain meaningful results.
+
+
+[2.1 HygieneScore_FacilityType.html]
+
+
+On this figure, we can study the differences between `Public` and `Private` establishments.
+
+The same **no particular trend** can be observed for the `Public` establishments, except for the `Restaurant` type of facility which happens to have no important variations until *2018* where, then for *2019*, the rise of the `HygieneScores` is huge. The `Restaurant` type of facility is the one with the more entries in the dataset.
+
+For the `Private` establishments, we can say that the `HygieneScores` are more stable. They seems to follow the same trend, with a rise in *2018* and *2019*.
+
+### Conclusion :
+**The Private establishements are the more sensitive. Because of the way they works - children, elderly are in their care and are often expensive - they generally have to follow specific rules. Their particular duty could explain the fact that their results are more constant than the ones of the Public establishments.**
+
+---
+
+## 3. HygieneScores / Owner
+
+We thought that it would be interesting to calculate the pearson coefficient between the `HygieneScores` and the `Number of Restaurants` by `Owner`. Using the **.corr()** function, we obtained the result : **PCC = -0.29536601012489433**
+
+### Conclusion :
+**The HygieneScores and the Number of Restaurants by Owner are not correlated following the Pearson method.**
+
+**The result obtained is contrary to our thinking : we would have thought that the more establishments a owner has, the more able he is to enforce rules fitting the Food Code - owning several establishements would induce more experiment and resources. Apparently, this is not the case !**
+
+---
+
+## 4. CrimeScores / Community Area
+
+### General Visualization
+
+The following figure allows to visualize the `CrimeScores` per `Year` for each `Community Area`. It is possible to unselect the year we don't want to display clicking on its label on the right of the figure.
+
+
+[4.1 CrimeScore_ComArea_Bars.html]
+
+
+This figure allows to see in details the `CrimeScores` of each `Community Area`. 
+What we can already see is that the `CrimeScore` are very different **inter**-`Community Areas`, but stay in the same ranges **intra**-`Community Areas`. Mostly, the `CrimeScores` have decreased between 2010 and 2015, then have rised in 2016.
+
+Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
+
+
+[4.2 crime_map_2010.html] ...
+
+
+As we can see from the maps, the crime score stays more or less stable with a slight decrease from 2010 to 2015. In 2017, as on the figure 4.1, we can observe very low crime scores everywhere. As we read nothing that could explain this, we think it is an issue in the dataset, maybe a non-complet dataset for this year.
+
+We can also see that one community area particularly stands out every year (except 2017) : Austin. Getting information on this community area we find it is one of the most populated community area and that there is in Austin a lot of violent crimes. That explains the high crime score that it gets as crimes scores are calculated based on the penalty of the crimes.
+
+
+Considering the previous results in the `HygieneScores` sections, this rise cannot be explain by our analysis of the *Chicago Food Inspections* yet, but it already has been discussed. Quickly searching on Google, many articles relate this trend : 
+
+"The city's overall crime rate, especially the violent crime rate, is higher than the US average. Chicago was responsible for nearly half of 2016's increase in homicides in the US, though the nation's crime rates remain near historic lows. The reasons for the higher numbers in Chicago remain unclear." - https://en.wikipedia.org/wiki/Crime_in_Chicago
+
+Apparently, their analysis of the *Chicago Food Inspections* could not have explained it either.
+
+
+[4.2 'CrimeScore_ComArea_Scatter.html']
+
+
+The point of view on this figure allows to well visualized the fact that there is a general trend in which the `CrimeScores` varie linearly by `CommunityArea`.
+
+### Visualization Year By Year
+
+The following figure allows to visualize the results in another way - each bar contains all the `HygieneScores` of the `Community Areas`. 
+
+### Correlation
+
+The **corr** function gives the pearson coefficient between the `CrimeScores` and the `Community Areas`.
+
+[4.3 Corr_crime.html]
+
+### Conclusion :
+**The CrimeScore really is related to the place.**
+
+**DIRE QUELQUE CHOSE D'UN PEU CRIMINO ??**
+
+---
+
+# 5. Hygiene versus Crime
+
+### Correlation
+
+The difference of the trends detected between `HygieneScores` and `CrimeScores` strongly lead to think that there is no correlation between the two. Using the **.corr()** function, we obtained the result : **PCC = -0.3059226707490215**
+
+### Conclusion :
+**The CrimeScore and the HygieneScore are not correlated following the Pearson method.**
+
+**In our opinion, this result is a very good point :
+**- Even if in some Community Areas the CrimeScore and therefore the level of criminality is very high, it doesn't impact the food establishments of the place
+**- The Chicago department of Public Health's Food Protection Program works the same way no matter the Community Area : it is generallly not the fault of the people who want to run food establishments if the criminiality level is high, so they should not be penalized by it.
+---
+
+**++ REGARDER S'IL Y A MOINS DE RESTAU IN THE GHETTO
+
+
+# 6. Summary
 
