@@ -8,7 +8,7 @@ tags: [crime, food, chicago]
 comments: true
 output:
   html_document:
-    css: /styles.css
+    css: \_posts/styles.css
     self_contained: no
 ---
 
