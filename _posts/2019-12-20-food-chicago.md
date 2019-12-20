@@ -157,7 +157,7 @@ The result of the correlation computation is in accordance with the rest of the 
 
 **Considering the constant variations in the food domain, the results obtained could simply indicated that the inspections are fair, following the phenomenon of changes, unpredictable due to the behaviors in the restauration industry.**
 
-N.B. : The results observed for Burnside, the 47th Community Area, can be explained with the [*White Flight* phenomenon](https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also that it is situated on the border of the city and is a "comfortable residential community". [Source : wikipedia](https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1)
+N.B. : The results observed for Burnside, the 47th Community Area, can be explained with the [*White Flight* phenomenon](https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also with the geographical situation on the border of the city, which leads Burnside to be more a "comfortable residential community". [Source : wikipedia](https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1)
 
 The low `HygieneScores` could either be explained by a smallest number of establishments with correct `HygieneScores` running in a zone whose comfort could ease the maintenance of the establishments. 
 
