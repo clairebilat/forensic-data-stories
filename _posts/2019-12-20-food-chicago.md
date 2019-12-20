@@ -248,4 +248,4 @@ The difference of the trends detected between `HygieneScores` and `CrimeScores` 
 - The Chicago department of Public Health's Food Protection Program works the same way no matter the Community Area : it is generallly not the fault of the people who want to run food establishments if the criminiality level is high, so they should not be penalized by it.
 ---
 
-To end 
+To end the story, we would like to warn you about the fact that if some `Community Areas` are more affected by the *criminality* than other, the *criminality* itself strongly depends on the people involved in the crimes - autors, victimes. Without solid data analysis of the actors of the crimes, we cannot tell you that you would not be safe in certain `Community Areas` according to your profil.
