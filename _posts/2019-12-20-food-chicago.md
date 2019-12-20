@@ -91,7 +91,7 @@ In order to compute the **hygiene score** of a community area, we first computed
 
 The formula used to compute the hygiene score of an inspection is the following :
 
-![img](http://www.sciweavers.org/tex2img.php?eq=InspectionHygieneScore%20%3D%20NumberViolationsInspection%20%2A%20InspectionResult%5E3%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0){: .center-block :}
+![img](https://github.com/clairebilat/forensic-data-stories/blob/master/img/equation.png){: .center-block :}
 
 We gave much more weight to the result of the inspection because there are some violations more serious than others which can cause some biais : an establishment could fail its inspection by violating only one serious hygiene rule and another establishment could pass its inspection (with conditions) by violating two or more less serious hygiene rules.
 
