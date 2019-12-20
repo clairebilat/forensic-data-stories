@@ -6,6 +6,10 @@ gh-repo: clairebilat/forensic-data-stories
 gh-badge: [star, follow]
 tags: [crime, food, chicago]
 comments: true
+styles: 
+  .iframe-container {overflow: hidden; padding-top: 56.25%; position: relative;}
+  .iframe-container iframe {border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;}
+  
 ---
 
 # 1. Introduction
