@@ -202,9 +202,9 @@ The following figure the visualization of the `CrimeScores` per `Year` for each 
 &nbsp; &nbsp; &nbsp; *unselect the years you don't want to display by clicking on their label on the right*
 
 This figure allows to see in details the `CrimeScores` of each `Community Area`. 
-What we can already see is that the `CrimeScore` are very different **inter**-`Community Areas`, but stay in the same ranges **intra**-`Community Areas`. Mostly, the `CrimeScores` have decreased between 2010 and 2015, then have rised in 2016.
+We can already see that the `CrimeScore` are very different **inter**-`Community Areas`, but stay in the same ranges **intra**-`Community Areas`. Mostly, the `CrimeScores` have decreased between 2010 and 2015, then have rised in 2016.
 
-Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
+Now let's take a look at the city map for another point of view.
 
 
 <img src="{{site.github.url}}/assets/img/crime_map_2016.PNG">
@@ -212,7 +212,7 @@ Now let's have take a look at the city of Chicago map, in order to have a geospa
 ---
 
 
-As we can see from the maps, the crime score stays more or less stable with a slight decrease from 2010 to 2015. In 2017, as on the figure 4.1, we can observe very low crime scores everywhere. As we read nothing that could explain this, we think it is an issue in the dataset, maybe a non-complet dataset for this year.
+As we can see from the map, the crime score stays more or less stable with a slight decrease from 2010 to 2015. In 2017, as on the figure 4.1, we can observe very low crime scores everywhere. As we read nothing that could explain this, we think it is an issue in the dataset, maybe a non-complet dataset for this year.
 
 We can also see that one community area particularly stands out every year (except 2017) : Austin. Getting information on this community area we find it is one of the most populated community area and that there is in Austin a lot of violent crimes. That explains the high crime score that it gets as crimes scores are calculated based on the penalty of the crimes.
 
@@ -227,17 +227,17 @@ Apparently, their analysis of the *Chicago Food Inspections* could not have expl
 {% include CrimeScore_ComArea_Scatter.html %}
 
 
-The point of view on this figure allows to well visualized the fact that there is a general trend in which the `CrimeScores` varie linearly by `CommunityArea`.
+This figure allows a good visualization of the fact that there is a general trend in which the `CrimeScores` varie linearly by `CommunityArea`.
 
 
 ### Correlation
 
-The **corr** function gives the pearson coefficient between the `CrimeScores` and the `Community Areas`.
+The **corr** function gives the Pearson Coefficient between the `CrimeScores` and the `Community Areas`.
 
 {% include Corr_crime.html %}
 
-### Conclusion :
-**The CrimeScore really is related to the place.**
+
+**The CrimeScore appears to be very related to the place.**
 
 **DIRE QUELQUE CHOSE D'UN PEU CRIMINO ??**
 
