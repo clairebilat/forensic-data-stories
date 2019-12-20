@@ -113,6 +113,6 @@ Here we took the sum because we assumed that there was no huge difference betwee
 
 # 4. Conclusion
 
-<div>
+<div class="iframe-container">
   <iframe src="/frames_agathe/Corr_eat.html"></iframe>
 </div>
