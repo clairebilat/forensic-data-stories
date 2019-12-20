@@ -8,13 +8,13 @@ tags: [crime, food, chicago]
 comments: true
 ---
 
-# 1. Prologue
+# Prologue
 
-## 1.1 About us
+## About us
 
 We are four students who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, we found ourselves trying to make a success of an EPFL course intituled "Applied Data Analysis". We were asked to developp a project under the theme *data science for social good*. A variety of datasets were provided by the course's organisators including the [Chicago Food Inspections Database](http://dev.cityofchicago.org/open%20data/data%20portal/2018/06/29/food-violations-changes.html), which we selected for our project. However, as forensic sciences students, we could not miss the opportunity to make everything about criminology, which ultimately led to this study. We indeed added a [database of the crimes in Chicago](https://www.kaggle.com/currie32/crimes-in-chicago) in order to analyse the correlation, for a given community area in Chicago, between the number of crimes committed and the hygiene of the food establishments (among other various things).
 
-## 1.2 About the databases used
+## About the databases used
 
 The first dataset that we used is the **Chicago Food Inspections Database** linked above and provided by the Chicago department of Public Health's Food Protection Program. It contains informations regarding the inspection reports of food establishments in Chicago from 2010 to the present. Some informations are directly linked to the establishments like their exact location, their type (restaurants, coffee shop, ...) or their license number. Some other informations document the inspections realized like their result (pass, fail, ...) or the violations noticed.
 
@@ -24,9 +24,9 @@ The third dataset used for this projet is the **[Chicago Business Licenses and O
 
 The fourth and last dataset used for this project is the **[Geographic Boundaries of Community Areas in Chicago Database](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6)** provided by the City of Chicago. This dataset allowed us to link the food establishments of the first dataset to their respective community areas.
 
-## 1.3 About this project
+## About this project
 
-### 1.3.1 Research questions
+### Research questions
 
 The main research question was : **where to eat *safely* in Chicago ?**
 
@@ -51,17 +51,17 @@ Some other research questions were added to the project :
   - Is there a relation between the number of establishments that an owner has and the hygiene scores obtained ?
   - Is there a relation between a  specific owner and the hygiene score of his establishments ?
  
-### 1.3.2 Limits
+### Limits
 
 An important point is to pay attention to the *number of inspected establishments* compared to *the total number of establishments*. It is certain than the variations of this ratio between the community areas has an impact on the results. An explanation of the variations should be purposed. In order to give a complete answer to the main research question, the uninspected establishments have to be taken into account.
 
-# 2. Preprocessing
+# Preprocessing
 
 This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[our project notebook](https://github.com/clairebilat/ada-2019-project-lost-and-found)** if you have an insatiable curiosity about it.
 
-## 2.1 The Chicago Food Inspections Database
+## The Chicago Food Inspections Database
 
-### 2.1.1 The `Facility group`
+### The `Facility group`
 
 The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for the purpose of our project. As explained before, we created two main categories, *private* and *public* establishments, containing a few custom **facility groups** into which the facility types of interest are distributed. Those facility groups are listed below.
 
@@ -82,7 +82,7 @@ The Database contains informations about the facility type of the establishments
      - childrens services
      - adulte care
      
-### 2.1.2 The `Hygiene score`
+### The `Hygiene score`
 
 In order to compute the **hygiene score** of a community area, we first computed the hygiene score of an inspection. To do so, we took into account the inspection's result and the number of violations detected during the inspection. There is three main possible outcomes of an inspection : either the facility **passes** the inspection or it **passes with conditions** or it **fails**. We attributed an arbitrary score to each of those outcomes :
 - **Pass** = 1
@@ -101,7 +101,7 @@ The **hygiene score of a community area, per year** is defined by **the mean of 
 
 We took the mean and not the sum because the distribution of inspections within the different community areas is not homogen and we could not assume that the ratio between inspected and uninspected establishments is the same for each community area.
 
-## 2.2 The Crimes in Chicago Database : the `Crime score`
+## The Crimes in Chicago Database : the `Crime score`
 
 In order to compute the **crime score** of a community area, we first computed the crime score of a reporterd crime. To do so, we took into account the crime's minimum sentence (in term of years of imprisonment) provided by the Illinois Penalty Code. For the crimes where the minimum sentence is not imprisonment, we fixed the crime score to 0,1. 
 
@@ -109,11 +109,11 @@ The **crime score of a community area, per year** is defined by **the sum of the
 
 Here we took the sum because we assumed that there was no huge difference between the ratios of reported vs unreported crimes for each community area.
 
-# 3. Results and discussion
+# Results and discussion
 
-## 3.1. HygieneScores / Community Area
+## HygieneScores / Community Area
 
-### 3.1.1 General Visualization
+### General Visualization
 
 The following figure allows to visualize the `HygieneScores` per `Year` for each `Community Area`. The *Mean* line helps to see the bars tending to deviate from the `Median` computed. 
 
@@ -153,7 +153,6 @@ The **.corr()** function gives the Pearson Coefficient between the `HygieneScore
 
 The result of the correlation computation is in accordance with the rest of the analysis : there is indeed no relation between the `HygieneScore` and the `Community Areas`.
 
-### Conclusion
 
 **Considering the constant variations in the food domain, the results obtained could simply indicated that the inspections are fair, following the phenomenon of changes, unpredictable due to the behaviors in the restauration industry.**
 
@@ -163,7 +162,7 @@ The low `HygieneScores` could either be explained by a smallest number of establ
 
 ---
 
-## 2. HygieneScores / Facility Type
+## HygieneScores / Facility Type
 
 The data also give the `Facility Type` of each establishments. As explained at the begining of our story, they have been put into groups in order to obtain meaningful results.
 
@@ -177,23 +176,23 @@ The same **no particular trend** can be observed for the `Public` establishments
 
 For the `Private` establishments, we can say that the `HygieneScores` are more stable. They seems to follow the same trend, with a rise in *2018* and *2019*.
 
-### Conclusion :
+
 **The Private establishements are the more sensitive. Because of the way they works - children, elderly are in their care and are often expensive - they generally have to follow specific rules. Their particular duty could explain the fact that their results are more constant than the ones of the Public establishments.**
 
 ---
 
-## 3. HygieneScores / Owner
+## HygieneScores / Owner
 
 We thought that it would be interesting to calculate the pearson coefficient between the `HygieneScores` and the `Number of Restaurants` by `Owner`. Using the **.corr()** function, we obtained the result : **PCC = -0.29536601012489433**
 
-### Conclusion :
+
 **The HygieneScores and the Number of Restaurants by Owner are not correlated following the Pearson method.**
 
 **The result obtained is contrary to our thinking : we would have thought that the more establishments a owner has, the more able he is to enforce rules fitting the Food Code - owning several establishements would induce more experiment and resources. Apparently, this is not the case !**
 
 ---
 
-## 4. CrimeScores / Community Area
+## CrimeScores / Community Area
 
 ### General Visualization
 
@@ -245,7 +244,7 @@ The **corr** function gives the pearson coefficient between the `CrimeScores` an
 
 ---
 
-# 5. Hygiene versus Crime
+# Hygiene versus Crime
 
 ### Correlation
 
