@@ -6,10 +6,6 @@ gh-repo: clairebilat/forensic-data-stories
 gh-badge: [star, follow]
 tags: [crime, food, chicago]
 comments: true
-#output:
-#  html_document:
-#    css: /styles.css
-#    self_contained: no
 ---
 
 # 1. Prologue
@@ -134,7 +130,7 @@ The entry which really is above the rest is the `Community Area` **47** with a M
 The following figure allows to visualize the results in another way - each bar contains all the `HygieneScores` of the `Community Areas`. 
 
 
-{% include HygieneScore_ComArea_2.html %}
+include HygieneScore_ComArea_2.html
 
 
 Zooming on few `Community Areas`, we can notice again that the repartition for each `Year` seems to be *random*. 
@@ -175,7 +171,7 @@ The low `HygieneScores` could either be explained by a smallest number of establ
 The data also give the `Facility Type` of each establishments. As explained at the begining of our story, they have been put into groups in order to obtain meaningful results.
 
 
-{% include HygieneScore_FacilityType.html %}
+include HygieneScore_FacilityType.html
 
 
 On this figure, we can study the differences between `Public` and `Private` establishments.
