@@ -233,9 +233,6 @@ Apparently, their analysis of the *Chicago Food Inspections* could not have expl
 
 The point of view on this figure allows to well visualized the fact that there is a general trend in which the `CrimeScores` varie linearly by `CommunityArea`.
 
-### Visualization Year By Year
-
-The following figure allows to visualize the results in another way - each bar contains all the `HygieneScores` of the `Community Areas`. 
 
 ### Correlation
 
@@ -263,9 +260,6 @@ The difference of the trends detected between `HygieneScores` and `CrimeScores` 
 **- Even if in some Community Areas the CrimeScore and therefore the level of criminality is very high, it doesn't impact the food establishments of the place
 **- The Chicago department of Public Health's Food Protection Program works the same way no matter the Community Area : it is generallly not the fault of the people who want to run food establishments if the criminiality level is high, so they should not be penalized by it.
 ---
-
-**++ REGARDER S'IL Y A MOINS DE RESTAU IN THE GHETTO
-
 
 # 6. Summary
 
