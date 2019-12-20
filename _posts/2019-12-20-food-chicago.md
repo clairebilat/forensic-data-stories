@@ -119,7 +119,7 @@ The following figure allows to visualize the `HygieneScores` per `Year` for each
 
 
 {% include HygieneScore_ComArea_Bars.html %}
-  *unselect the years you don't want to display by clicking on their label on the right*
+   *unselect the years you don't want to display by clicking on their label on the right*
 
 We can see that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*, except for on entry, which is really above the rest, for the **47**th `Community Area` with a Median at *4*. This community area has low `HygieneScores`, exception made of 2013.
 
@@ -147,7 +147,6 @@ As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to 
 
 The **.corr()** function gives the Pearson Coefficient between the `HygieneScores` and the `Community Areas`.¨
 
-
 {% include Corr_eat.html %}
 
 
@@ -158,7 +157,7 @@ The result of the correlation computation is in accordance with the rest of the 
 
 N.B. : The results observed for Burnside, the 47th Community Area, can be explained with the [*White Flight* phenomenon](https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also with the geographical situation on the border of the city, which leads Burnside to be more a "comfortable residential community". [Source : wikipedia](https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1)
 
-The low `HygieneScores` could either be explained by a smallest number of establishments with correct `HygieneScores` running in a zone whose comfort could ease the maintenance of the establishments. 
+The low `HygieneScores` could either be explained by a small number of establishments with correct `HygieneScores` running in a zone whose comfort could ease the maintenance of the establishments. 
 
 ---
 
@@ -172,23 +171,23 @@ The data also give the `Facility Type` of each establishments. As explained at t
 
 On this figure, we can study the differences between `Public` and `Private` establishments.
 
-The same **no particular trend** can be observed for the `Public` establishments, except for the `Restaurant` type of facility which happens to have no important variations until *2018* where, then for *2019*, the rise of the `HygieneScores` is huge. The `Restaurant` type of facility is the one with the more entries in the dataset.
+Again **no particular trend** can be observed for the `Public` establishments, except for the category `Restaurant` which happens to have minimized variations until *2018* where the rise of the `HygieneScores` is huge. The `Restaurant` type of facility is the one with the more entries in the dataset.
 
 For the `Private` establishments, we can say that the `HygieneScores` are more stable. They seems to follow the same trend, with a rise in *2018* and *2019*.
 
 
-**The Private establishements are the more sensitive. Because of the way they works - children, elderly are in their care and are often expensive - they generally have to follow specific rules. Their particular duty could explain the fact that their results are more constant than the ones of the Public establishments.**
+**The Private establishements are the more sensitive. Because of the way they works - children or elderly are in their care and those care are often expensive - they generally have to follow specific rules. Their particular duty could explain the fact that their results are more constant than the ones of the Public establishments.**
 
 ---
 
 ## HygieneScores / Owner
 
-We thought that it would be interesting to calculate the pearson coefficient between the `HygieneScores` and the `Number of Restaurants` by `Owner`. Using the **.corr()** function, we obtained the result : **PCC = -0.29536601012489433**
+We thought that it would be interesting to calculate the Pearson Coefficient between the `HygieneScores` and the `Number of Restaurants` by `Owner`. Using the **.corr()** function, we obtained the result : **PCC = -0.29536601012489433**
 
 
 **The HygieneScores and the Number of Restaurants by Owner are not correlated following the Pearson method.**
 
-**The result obtained is contrary to our thinking : we would have thought that the more establishments a owner has, the more able he is to enforce rules fitting the Food Code - owning several establishements would induce more experiment and resources. Apparently, this is not the case !**
+**The result obtained is contrary to our thinking : we thought that the more establishments a owner has, the more able he is to enforce rules fitting the Food Code - owning several establishements would induce more experiment and resources. Apparently, this is not the case !**
 
 ---
 
@@ -196,11 +195,11 @@ We thought that it would be interesting to calculate the pearson coefficient bet
 
 ### General Visualization
 
-The following figure allows to visualize the `CrimeScores` per `Year` for each `Community Area`. It is possible to unselect the year we don't want to display clicking on its label on the right of the figure.
+The following figure the visualization of the `CrimeScores` per `Year` for each `Community Area`.
 
 
 {% include CrimeScore_ComArea_Bars.html %}
-
+&nbsp; *unselect the years you don't want to display by clicking on their label on the right*
 
 This figure allows to see in details the `CrimeScores` of each `Community Area`. 
 What we can already see is that the `CrimeScore` are very different **inter**-`Community Areas`, but stay in the same ranges **intra**-`Community Areas`. Mostly, the `CrimeScores` have decreased between 2010 and 2015, then have rised in 2016.
