@@ -61,7 +61,7 @@ This part of our project is not the most thrilling so we will not go over every 
 
 ### 2.1.1 The column `Facility group`
 
-The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for us 
+The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for the purpose of our project. 
 
 ## 2.2 The Crimes in Chicago Database
 
