@@ -119,7 +119,7 @@ The following figure allows to visualize the `HygieneScores` per `Year` for each
 
 
 {% include HygieneScore_ComArea_Bars.html %}
-<space> *unselect the years you don't want to display by clicking on their label on the right*
+&nbsp; &nbsp; &nbsp; *unselect the years you don't want to display by clicking on their label on the right*
 
 We can see that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*, except for on entry, which is really above the rest, for the **47**th `Community Area` with a Median at *4*. This community area has low `HygieneScores`, exception made of 2013.
 
@@ -199,7 +199,7 @@ The following figure the visualization of the `CrimeScores` per `Year` for each 
 
 
 {% include CrimeScore_ComArea_Bars.html %}
-&nbsp; *unselect the years you don't want to display by clicking on their label on the right*
+&nbsp; &nbsp; &nbsp; *unselect the years you don't want to display by clicking on their label on the right*
 
 This figure allows to see in details the `CrimeScores` of each `Community Area`. 
 What we can already see is that the `CrimeScore` are very different **inter**-`Community Areas`, but stay in the same ranges **intra**-`Community Areas`. Mostly, the `CrimeScores` have decreased between 2010 and 2015, then have rised in 2016.
