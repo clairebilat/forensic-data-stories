@@ -135,11 +135,11 @@ Now let's have a look at the map of Chicago, in order to have a geospatial view 
 
 <img src="{{site.github.url}}/assets/img/eat_map_2017.PNG">
 
-As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **lack of trend** which ends up being a **particular trend*.
+As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **absence of trend** which ends up being a **particular trend.
 
 ### Correlation
 
-The **.corr()** function gives the Pearson Coefficient between the `HygieneScores` and the `Community Areas`.¨
+The **.corr()** function gives the Pearson Coefficient between the `HygieneScores` and the `Community Areas`.
 
 {% include Corr_eat.html %}
 
@@ -243,7 +243,9 @@ The difference of the trends detected between `HygieneScores` and `CrimeScores` 
 
 **The CrimeScore and the HygieneScore are not correlated following the Pearson method. In our opinion, this result is a very good point :
 
-**- Even if in some Community Areas the CrimeScore and therefore the level of criminality is very high, it doesn't impact the food establishments of the place
+- Even if in some Community Areas the CrimeScore and therefore the level of criminality is very high, it doesn't impact the food establishments of the place
 
-**- The Chicago department of Public Health's Food Protection Program works the same way no matter the Community Area : it is generallly not the fault of the people who want to run food establishments if the criminiality level is high, so they should not be penalized by it.
+- The Chicago department of Public Health's Food Protection Program works the same way no matter the Community Area : it is generallly not the fault of the people who want to run food establishments if the criminiality level is high, so they should not be penalized by it.
 ---
+
+To end 
