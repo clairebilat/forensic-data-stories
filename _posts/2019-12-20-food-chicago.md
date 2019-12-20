@@ -36,15 +36,21 @@ It has been decided that additionally to the **geographic component** of the ana
 
 Some other research questions were added to the project :
 - About the **hygiene score** :
- - Are their significant differences of hygiene scores between the community areas ?
- - How is the evolution over time ?
+  - Are their significant differences of hygiene scores between the community areas ?
+  - How is the evolution over time ?
 - About the **management** of food establishments :
- - Is their a relation between the number of establishments that an owner has and the hygiene scores obtained ?
- - In which way a change of owner changes the hygiene score of an establishment ?
+  - Is their a relation between the number of establishments that an owner has and the hygiene scores obtained ?
+  - In which way a change of owner changes the hygiene score of an establishment ?
  
 ### 1.3.2 Limits
 
 An important point is to pay attention to the *number of inspected establishments* compared to *the total number of establishments*. It is certain than the variations of this ratio between the community areas has an impact on the results. An explanation of the variations should be purposed. In order to give a complete answer to the main research question, the uninspected establishments have to be taken into account.
+
+# 2. Preprocessing
+
+This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. 
+
+- About the 
 
 
 
