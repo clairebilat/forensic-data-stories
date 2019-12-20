@@ -121,45 +121,43 @@ The following figure allows to visualize the `HygieneScores` per `Year` for each
 {% include HygieneScore_ComArea_Bars.html %}
   *unselect the years you don't want to display by clicking on their label on the right*
 
-We can see that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*.
-
-The entry which really is above the rest is the `Community Area` **47** with a Median at *4*, except in 2013, it has low `HygieneScores`. 
+We can see that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*, except for on entry, which is really above the rest, for the **47**th `Community Area` with a Median at *4*. This community area has low `HygieneScores`, exception made of 2013.
 
 ### Visualization Year By Year
 
-The following figure allows to visualize the results in another way - each bar contains all the `HygieneScores` of the `Community Areas`. 
+The following figure allows a visualization of the results in another way - each bar contains all the `HygieneScores` of the `Community Areas`. 
 
 
 {% include HygieneScore_ComArea_2.html %}
 
 
-Zooming on few `Community Areas`, we can notice again that the repartition for each `Year` seems to be *random*. 
+Zooming in, we can notice again that the repartition for each `Year` seems to be *random*. 
 
-We have also plotted the `HygieneScores` in descending order, to see if the order of the `Community Areas` could learn us something : neither the top 10 nor the bottom 10 are alike, except for the **47th** `Community Area` which stays at the top 1 - getting the *lowest* scores so the best results.
+We also have plotted the `HygieneScores` in descending order, to see if we could learn something from it but neither the top 10 nor the bottom 10 are alike, except for the **47th** `Community Area` which stays at the top 1 - getting the *lowest* scores so the best results.
 
 
-Now let's have take a look at the city of Chicago map, in order to have a geospatial view of the results.
+Now let's have a look at the map of Chicago, in order to have a geospatial view of the results.
 
 
 <img src="{{site.github.url}}/assets/img/eat_map_2017.PNG">
 
-As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **no particular trend** which ends up being a **particular trend*.
+As well as we saw on the figure 1.1 and 1.2, the `HygieneScore` doesn't seem to follow any rule relative to the `Community Areas`. The maps for the other years - 2011, 2012, 2013, 2014, 2015, 2016 and 2017 - are showing the exact same **lack of trend** which ends up being a **particular trend*.
 
 ### Correlation
 
-The **.corr()** function gives the pearson coefficient between the `HygieneScores` and the `Community Areas`.¨
+The **.corr()** function gives the Pearson Coefficient between the `HygieneScores` and the `Community Areas`.¨
 
 
 {% include Corr_eat.html %}
 
 
-To conclude, the result of the correlation computation is in accordance with the rest of the analysis : there is no relation between the `HygieneScore` and the `Community Areas`.
+The result of the correlation computation is in accordance with the rest of the analysis : there is indeed no relation between the `HygieneScore` and the `Community Areas`.
 
 ### Conclusion
 
 **Considering the constant variations in the food domain, the results obtained could simply indicated that the inspections are fair, following the phenomenon of changes, unpredictable due to the behaviors in the restauration industry.**
 
-N.B. : For the case of the 47th Community Area of Chicago, called Burnside, explains that it has known the [*White Flight* phenomenon](https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also that it is situated on the border of the city and is a "comfortable residential community". [Source : wikipedia](https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1)
+N.B. : The results observed for Burnside, the 47th Community Area, can be explained with the [*White Flight* phenomenon](https://en.wikipedia.org/wiki/White_flight), leading the businesses to move away, but also that it is situated on the border of the city and is a "comfortable residential community". [Source : wikipedia](https://en.wikipedia.org/wiki/Burnside,_Chicago#cite_note-cmap-1)
 
 The low `HygieneScores` could either be explained by a smallest number of establishments with correct `HygieneScores` running in a zone whose comfort could ease the maintenance of the establishments. 
 
