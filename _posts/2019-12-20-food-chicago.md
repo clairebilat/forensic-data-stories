@@ -119,7 +119,7 @@ The following figure allows to visualize the `HygieneScores` per `Year` for each
 
 
 {% include HygieneScore_ComArea_Bars.html %}
-   *unselect the years you don't want to display by clicking on their label on the right*
+<space> *unselect the years you don't want to display by clicking on their label on the right*
 
 We can see that there is **no particular trend**, with a `Median` oscillating between about *30* and *60*, except for on entry, which is really above the rest, for the **47**th `Community Area` with a Median at *4*. This community area has low `HygieneScores`, exception made of 2013.
 
