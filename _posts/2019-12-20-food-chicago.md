@@ -241,7 +241,7 @@ The **corr** function gives the Pearson Coefficient between the `CrimeScores` an
 
 The difference of the trends detected between `HygieneScores` and `CrimeScores` strongly lead to think that there is no correlation between the two. Using the **.corr()** function, we obtained the result : **PCC = -0.3059226707490215**
 
-**The CrimeScore and the HygieneScore are not correlated following the Pearson method. In our opinion, this result is a very good point :
+**The CrimeScore and the HygieneScore are not correlated following the Pearson method. In our opinion, this result is a very good point :**
 
 - Even if in some Community Areas the CrimeScore and therefore the level of criminality is very high, it doesn't impact the food establishments of the place
 
