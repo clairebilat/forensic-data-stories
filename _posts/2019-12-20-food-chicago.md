@@ -94,7 +94,7 @@ The formula used to compute the hygiene score of an inspection is the following 
 
 We gave much more weight to the result of the inspection because there are some violations more serious than others which can cause some biais : an establishment could fail its inspection by violating only one serious hygiene rule and another establishment could pass its inspection (with conditions) by violating two or more less serious hygiene rules.
 
-The **hygiene score of an establishment, per year** is defined by **the mean of the hygiene scores from every inspections performed within the year in the particular establishment.
+The **hygiene score of an establishment, per year** is defined by **the mean of the hygiene scores from every inspections performed within the year in the particular establishment**.
 
 The **hygiene score of a community area, per year** is defined by **the mean of the hygiene scores from every inspections that took place within the year in the particular area**.
 
