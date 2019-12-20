@@ -83,7 +83,14 @@ The Database contains informations about the facility type of the establishments
      
 ### 2.1.2 The `Hygiene score`
 
-In order to compute the **hygiene score** of a community area, we first computed the hygiene score of an inspection. 
+In order to compute the **hygiene score** of a community area, we first computed the hygiene score of an inspection. To do so, we took into account the inspection's result and the number of violations detected during the inspection. There is three main possible outcomes of an inspection : either the facility **passes** the inspection or it **passes with conditions** or it **fails**. We attributed an arbitrary score to each of those outcomes :
+- **Pass** = 1
+- **Pass with conditions** = 2
+- **Fail** = 3
+
+The formula used to compute the hygiene score of an inspection is the following :
+
+\[(Number of violations detected during the inspection) x (Inspection's result)^3 \]
 
 ## 2.2 The Crimes in Chicago Database
 
