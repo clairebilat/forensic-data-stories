@@ -60,7 +60,7 @@ This part of our project is not the most thrilling so we will not go over every 
 
 ## 2.1 The Chicago Food Inspections Database
 
-### 2.1.1 The column `Facility group`
+### 2.1.1 The `Facility group`
 
 The Database contains informations about the facility type of the establishments inspected but there were too many different types of facility for the purpose of our project. As explained before, we created two main categories, *private* and *public* establishments, containing a few costum **facility groups** into which the facility types of interest are distributed. Those facility groups are listed below.
 
@@ -81,9 +81,9 @@ The Database contains informations about the facility type of the establishments
      - childrens services
      - adulte care
      
-### 2.1.2 The column `Inspection score`
+### 2.1.2 The `Hygiene score`
 
-
+In order to compute the **hygiene score** of a community area, we first computed the hygiene score of an inspection. 
 
 ## 2.2 The Crimes in Chicago Database
 
