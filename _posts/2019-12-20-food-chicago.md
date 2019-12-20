@@ -37,6 +37,7 @@ It has been decided that additionally to the **geographic component** of the ana
 It has also been decided to distribute the facility types into **facility groups** that fall into two main categories :
 - The *private* establishments, where it is possible to eat a main course (for example, the places where you can only eat an ice cream    were deleted of our list).
 - The *public* establishments like school cafeterias and hospitals.
+
 More about the exact distribution of those facility groups will be explained later.
 
 Some other research questions were added to the project :
