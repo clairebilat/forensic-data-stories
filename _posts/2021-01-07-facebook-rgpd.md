@@ -34,7 +34,7 @@ The dataset used is the one I downloaded from Facebook containing a copy of my i
     
     <img src="{{site.github.url}}/assets/img/tuto4.PNG">
     
-4. Go to `Download your infromation.
+4. Go to `Download your infromation`.
     
     <img src="{{site.github.url}}/assets/img/tuto5.PNG">
     
@@ -50,25 +50,25 @@ The main research question was : **where to eat *safely* in Chicago ?**
 
 The 
 
-# Litterature review (or how what I wanted to do has already be done but I did it anyway)
+# Litterature review (or how what I wanted to do had already be done but I did it anyway)
 
 Many people have done similar projects (but it is a real pain trying to find them online because of all the Facebook scandals that pops when searching form terms like _Facebook data analysis_... Quick tip, try with keywords like "Analyze Your Personal Facebook Data" and exclude some keywords like "Analytics" and it will be a little bit better).
 
 1. [How much do you post](https://www.dataquest.io/blog/analyze-facebook-data-python/)
-  
-  This is a great tutorial that is surprisingly easy to follow, explaining in well illustrated steps how to plot your monthly post count. It takes five minutes to perform and is a really great way to introduce you to the structure of the data Facebook offers.
-
+    
+    This is a great tutorial that is surprisingly easy to follow, explaining in well illustrated steps how to plot your monthly post count. It takes five minutes to perform and is a really great way to introduce you to the structure of the data Facebook offers.
+    
 2. [Natural Language Processing](https://towardsdatascience.com/mapping-my-facebook-data-part-1-simple-nlp-98ce41f7f27d)
-  
-  This article explains how to discover what words you use most, words count, and basic stats about your data. It is out of the scope of my project but is 100% considered as prospect.
-
+    
+    This article explains how to discover what words you use most, words count, and basic stats about your data. It is out of the scope of my project but is 100% considered as prospect.
+    
 3. [Facebook Messenger Data](https://www.youtube.com/watch?v=z9W2cvmFPuA)
-  
-  This livestream replay is a video tutorial on how to explore your Facebook Messenger in order to compare the friends you contacted most and at which frequency. What is nice is that you can follow him coding for almost one hour, which can be easier for beginners.
-  
+    
+    This livestream replay is a video tutorial on how to explore your Facebook Messenger in order to compare the friends you contacted most and at which frequency. What is nice is that you can follow him coding for almost one hour, which can be easier for beginners.
+    
 4. [MOOC course](https://www.mooc-list.com/course/analyzing-your-facebook-data-python-leada)
-
-This MOOC course is supposed to guide you through analyzing your Facebook data, but was not available at the time I tried to enroll.
+    
+    This MOOC course is supposed to guide you through analyzing your Facebook data, but was not available at the time I tried to enroll.
 
 # Preprocessing
 
