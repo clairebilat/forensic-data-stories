@@ -43,17 +43,26 @@ The dataset used is the one I downloaded from Facebook containing a copy of my i
 <img src="{{site.github.url}}/assets/img/tuto6.PNG">
 
 
-## About this project
+## About the purpose of this project
 
-### Research questions
 
 The main research question was : **where to eat *safely* in Chicago ?**
 
 The 
 
+# Litterature review (or how it has already be done better than this but I did it anyway)
+
+Many people have done similar projects (but it is a real pain trying to find them online because of all the Facebook scandals that pops when searching form terms like _Facebook data analysis_... Quick tip, try with keywords like "Analyze Your Personal Facebook Data" and it will be a little bit better).
+
+1. How much do you post 
+
+https://www.dataquest.io/blog/analyze-facebook-data-python/
+
 # Preprocessing
 
 This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my project notebook](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
+
+It may not be the most thrilling part but it definitely was the most painful. ome of our columns have nested sub-columns in each row that are still in JSON format. 
 
 
 
