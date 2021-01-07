@@ -50,9 +50,9 @@ The main research question was : **where to eat *safely* in Chicago ?**
 
 The 
 
-# Litterature review (or how it has already be done better than this but I did it anyway)
+# Litterature review (or how what I wanted to do has already be done but I did it anyway)
 
-Many people have done similar projects (but it is a real pain trying to find them online because of all the Facebook scandals that pops when searching form terms like _Facebook data analysis_... Quick tip, try with keywords like "Analyze Your Personal Facebook Data" and it will be a little bit better).
+Many people have done similar projects (but it is a real pain trying to find them online because of all the Facebook scandals that pops when searching form terms like _Facebook data analysis_... Quick tip, try with keywords like "Analyze Your Personal Facebook Data" and exclude some keywords like "Analytics" and it will be a little bit better).
 
 1. [How much do you post](https://www.dataquest.io/blog/analyze-facebook-data-python/)
 
@@ -66,7 +66,9 @@ Many people have done similar projects (but it is a real pain trying to find the
 
   This livestream replay is a video tutorial on how to explore your Facebook Messenger in order to compare the friends you contacted most and at which frequency. What is nice is that you can follow him coding for almost one hour, which can be easier for beginners.
 
+4. [MOOC course](https://www.mooc-list.com/course/analyzing-your-facebook-data-python-leada)
 
+This MOOC course is supposed to guide you through analyzing your Facebook data, but was not available at the time I tried to enroll.
 
 # Preprocessing
 
