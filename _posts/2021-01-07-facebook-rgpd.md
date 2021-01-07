@@ -20,27 +20,27 @@ The dataset used is the one I downloaded from Facebook containing a copy of my i
 
 1. First, go to [Facebook](https://www.facebook.com/) and log in. Then, click on the `Account` button.
 
-<img src="{{site.github.url}}/assets/img/tuto1.PNG">
+  <img src="{{site.github.url}}/assets/img/tuto1.PNG">
 
 2. Go to `Settings & privacy`.
 
-<img src="{{site.github.url}}/assets/img/tuto2.PNG">
+  <img src="{{site.github.url}}/assets/img/tuto2.PNG">
 
 3. Go to `Settings`.
 
-<img src="{{site.github.url}}/assets/img/tuto3.PNG">
+  <img src="{{site.github.url}}/assets/img/tuto3.PNG">
 
 4. Go to `Your Facebook information`.
 
-<img src="{{site.github.url}}/assets/img/tuto4.PNG">
+  <img src="{{site.github.url}}/assets/img/tuto4.PNG">
 
 4. Go to `Download your infromation`.
 
-<img src="{{site.github.url}}/assets/img/tuto5.PNG">
+  <img src="{{site.github.url}}/assets/img/tuto5.PNG">
 
 5. Choose `Request copy`, adjust your parameters (I personnally chose the JSON format with a low quality of media), and click on `Create File`.
 
-<img src="{{site.github.url}}/assets/img/tuto6.PNG">
+  <img src="{{site.github.url}}/assets/img/tuto6.PNG">
 
 
 ## About the purpose of this project
@@ -56,15 +56,15 @@ Many people have done similar projects (but it is a real pain trying to find the
 
 1. [How much do you post](https://www.dataquest.io/blog/analyze-facebook-data-python/)
 
-This is a great tutorial that is surprisingly easy to follow, explaining in well illustrated steps how to plot your monthly post count. It takes five minutes to perform and is a really great way to introduce you to the structure of the data Facebook offers.
+  This is a great tutorial that is surprisingly easy to follow, explaining in well illustrated steps how to plot your monthly post count. It takes five minutes to perform and is a really great way to introduce you to the structure of the data Facebook offers.
 
 2. [Natural Language Processing](https://towardsdatascience.com/mapping-my-facebook-data-part-1-simple-nlp-98ce41f7f27d)
 
-This article explains how to discover what words you use most, words count, and basic stats about your data. It is out of the scope of my project but is 100% considered as prospect.
+  This article explains how to discover what words you use most, words count, and basic stats about your data. It is out of the scope of my project but is 100% considered as prospect.
 
 3. [Facebook Messenger Data](https://www.youtube.com/watch?v=z9W2cvmFPuA)
 
-This livestream replay is a video tutorial on how to explore your Facebook Messenger in order to compare the friends you contacted most and at which frequency. What is nice is that you can follow him coding for almost one hour, which can be easier for beginners.
+  This livestream replay is a video tutorial on how to explore your Facebook Messenger in order to compare the friends you contacted most and at which frequency. What is nice is that you can follow him coding for almost one hour, which can be easier for beginners.
 
 
 
