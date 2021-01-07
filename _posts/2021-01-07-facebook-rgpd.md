@@ -18,12 +18,12 @@ I am a student who decided to complete a [master's degree in Digital Investigati
 
 The dataset used is the one I downloaded from Facebook containing a copy of my information. You can find yours following these steps :
 
-<img src="{{site.github.url}}/assets/img/tuto1.png">
-<img src="{{site.github.url}}/assets/img/tuto2.png">
-<img src="{{site.github.url}}/assets/img/tuto3.png">
-<img src="{{site.github.url}}/assets/img/tuto4.png">
-<img src="{{site.github.url}}/assets/img/tuto5.png">
-<img src="{{site.github.url}}/assets/img/tuto6.png">
+<img src="{{site.github.url}}/assets/img/tuto1.PNG">
+<img src="{{site.github.url}}/assets/img/tuto2.PNG">
+<img src="{{site.github.url}}/assets/img/tuto3.PNG">
+<img src="{{site.github.url}}/assets/img/tuto4.PNG">
+<img src="{{site.github.url}}/assets/img/tuto5.PNG">
+<img src="{{site.github.url}}/assets/img/tuto6.PNG">
 
 
 ## About this project
