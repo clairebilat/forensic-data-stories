@@ -1,18 +1,19 @@
 ---
 layout: post
-title: Eat safely in Chicago
-subtitle: A short data analysis of the Chicago Food Inspections Database
+title: Facebook GDPR Timeline in criminal investigation
+subtitle: A small processing and vizualisation of Facebook-GDPR Database
+prologue: test
 gh-repo: clairebilat/forensic-data-stories
 gh-badge: [star, follow]
-tags: [crime, food, chicago]
+tags: [facebook, GDPR, timeline]
 comments: true
 ---
 
 # Prologue
 
-## About us
+## About me
 
-We are four students who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, we found ourselves trying to make a success of an EPFL course intituled "Applied Data Analysis". We were asked to developp a project under the theme *data science for social good*. A variety of datasets were provided by the course's organisators including the [Chicago Food Inspections Database](http://dev.cityofchicago.org/open%20data/data%20portal/2018/06/29/food-violations-changes.html), which we selected for our project. However, as forensic sciences students, we could not miss the opportunity to make everything about criminology, which ultimately led to this study. We indeed added a [database of the crimes in Chicago](https://www.kaggle.com/currie32/crimes-in-chicago) in order to analyse the correlation, for a given community area in Chicago, between the number of crimes committed and the hygiene of the food establishments (among other various things).
+I am a student who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, I had to choose a personal practial lab theme for which I would take time to practice my theorical knowledge, produce something useful and maybe publish my results. After the success my colleagues and I had with our _Eat safely in Chicago_ project performed as part of the EPFL course intituled "Applied Data Analysis" (you will find our amazing results in [the first post of this blog](https://clairebilat.github.io/forensic-data-stories/2019-12-20-food-chicago/)), I could not refrain myself to make everything about data analysis once again. 
 
 ## About the databases used
 
