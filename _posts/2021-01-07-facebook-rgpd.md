@@ -2,7 +2,6 @@
 layout: post
 title: Facebook GDPR Timeline in criminal investigation
 subtitle: A small processing and vizualisation of Facebook-GDPR Database
-prologue: test
 gh-repo: clairebilat/forensic-data-stories
 gh-badge: [star, follow]
 tags: [facebook, GDPR, timeline]
@@ -13,17 +12,19 @@ comments: true
 
 ## About me
 
-I am a student who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, I had to choose a personal practial lab theme for which I would take time to practice my theorical knowledge, produce something useful and maybe publish my results. After the success my colleagues and I had with our _Eat safely in Chicago_ project performed as part of the EPFL course intituled "Applied Data Analysis" (you will find our amazing results in [the first post of this blog](https://clairebilat.github.io/forensic-data-stories/2019-12-20-food-chicago/)), I could not refrain myself to make everything about data analysis once again. 
+I am a student who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at University of Lausanne. As part of this, I had to choose a personal practial lab theme for which I would take time to practice my theorical knowledge, produce something useful and maybe publish my results. After the success my colleagues and I had with our _Eat safely in Chicago_ project performed as part of the EPFL course intituled "Applied Data Analysis" (you will find our amazing results in [the first post of this blog](https://clairebilat.github.io/forensic-data-stories/2019-12-20-food-chicago/)), I could not refrain myself to make everything about data analysis once again. Recently out of an internship in an Office of Police where I found myself having to review manually some Facebook profiles, I chose to try and write a script automating the processing and output of some basic vizualisations of Facebook GDPR data to help investigators grab a general idea of one's Facebook profile and its content without having to put too much work into it. 
 
 ## About the databases used
 
-The first dataset that we used is the **Chicago Food Inspections Database** linked above and provided by the Chicago department of Public Health's Food Protection Program. It contains informations regarding the inspection reports of food establishments in Chicago from 2010 to the present. Some informations are directly linked to the establishments like their exact location, their type (restaurants, coffee shop, ...) or their license number. Some other informations document the inspections realized like their result (pass, fail, ...) or the violations noticed.
+The dataset used is the one I downloaded from Facebook containing a copy of my information. You can find yours following these steps :
 
-The second dataset used for this project is the **Crimes in Chicago Database** also linked above and provided by the Chicago Police Department's Citizen Law Enforcement Analysis and Reporting. It contains informations regarding the reported incidents of crime that occured in Chicago from 2001 to present, like the primary type of the crime (homicide, burglary...) or its anonymized location.
+<img src="{{site.github.url}}/assets/img/tuto1.png">
+<img src="{{site.github.url}}/assets/img/tuto2.png">
+<img src="{{site.github.url}}/assets/img/tuto3.png">
+<img src="{{site.github.url}}/assets/img/tuto4.png">
+<img src="{{site.github.url}}/assets/img/tuto5.png">
+<img src="{{site.github.url}}/assets/img/tuto6.png">
 
-The third dataset used for this projet is the **[Chicago Business Licenses and Owners Database](https://www.kaggle.com/chicago/chicago-business-licenses-and-owners)** provided by the City of Chicago. It contains informations about the owners of establishments in Chicago and allowed us to link the food establishments of the first dataset to their respective owners.
-
-The fourth and last dataset used for this project is the **[Geographic Boundaries of Community Areas in Chicago Database](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6)** provided by the City of Chicago. This dataset allowed us to link the food establishments of the first dataset to their respective community areas.
 
 ## About this project
 
