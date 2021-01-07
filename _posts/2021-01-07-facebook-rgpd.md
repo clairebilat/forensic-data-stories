@@ -19,16 +19,27 @@ I am a student who decided to complete a [master's degree in Digital Investigati
 The dataset used is the one I downloaded from Facebook containing a copy of my information. You can find yours following these steps :
 
 1. First, go to [Facebook](https://www.facebook.com/) and log in. Then, click on the `Account` button.
+
 <img src="{{site.github.url}}/assets/img/tuto1.PNG">
+
 2. Go to `Settings & privacy`.
+
 <img src="{{site.github.url}}/assets/img/tuto2.PNG">
+
 3. Go to `Settings`.
+
 <img src="{{site.github.url}}/assets/img/tuto3.PNG">
+
 4. Go to `Your Facebook information`.
+
 <img src="{{site.github.url}}/assets/img/tuto4.PNG">
+
 4. Go to `Download your infromation`.
+
 <img src="{{site.github.url}}/assets/img/tuto5.PNG">
+
 5. Choose `Request copy`, adjust your parameters (I personnally chose the JSON format with a low quality of media), and click on `Create File`.
+
 <img src="{{site.github.url}}/assets/img/tuto6.PNG">
 
 
