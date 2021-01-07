@@ -1,16 +1,9 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: How to loose you in a lot of unordered not so useful facts about myself
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Claire Bilat. I am a soon-to-be diplomed student in Digital Forensics who has not a lot of time on her hands but still finds herself writing an _About me_ section in her blog. I often initiate unexpected projets to try and sparkle my life, last of them being the start of my rock climbing and motorcycling hobbies (sorry mom). I love languages and start to learn a new one every other week on Duolingo (with more or less success). 
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+For more facts about me (that one could consider more relevant) related to my studies and career, please refer to my [LinkedIn profile](https://www.linkedin.com/in/clairebilat/), in which I also invested far more time that I would like to admit.
