@@ -72,14 +72,16 @@ Many people have done similar projects (but it is a real pain trying to find the
 
 # Preprocessing
 
-This part of our project is not the most thrilling so I will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my Python script](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
+This part of my project is not the most thrilling so I will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my Python script](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
 
 This step definitely was the most painful. Every folder that the Facebook download data contains shows a different structure and it is **mostly nested sub-columns in each row** that are still in JSON format. In consequence, I had to manually review each folder individually and study its structure to extract some useful content, and that has not been automated. 
 Also, the **Facebook download data is incorrecly encoded**. The original data is UTF-8 encoded but was decoded as Latin-1 (no, it's not just me going crazy, [stackoverflow talks about it](https://stackoverflow.com/questions/50008296/facebook-json-badly-encoded)), which I had to take into account each time I wanted to interpret textual values.
-Last but not least, **the data is not well tokenized** and most of them are just strings describing the action resulting in this entry. As an example, I can cite the file containing informations about group memmbership activity (search for `groups/your_group_membership_activity.json`). The entries it contains can be two of the following strings :
+Last but not least, **the data is not well tokenized** and most of them are just strings describing the action resulting in this entry. As an example, I can cite the file containing informations about group memmbership activity (search for the file `groups/your_group_membership_activity.json`). The entries it contains can be two of the following strings :
 
-1. "You became member of group _xy_" (in French "Vous êtes devenue membre de _xy_")
-2. "You stopped being member of group _xy_" (in French "Vous avez arrêté d'être membre de _xy_")
+1. "You became member of group _xy_" 
+    (in French "Vous êtes devenue membre de _xy_").
+2. "You stopped being member of group _xy_" 
+    (in French "Vous avez arrêté d'être membre de _xy_").
 
 There are three problems with that :
 
@@ -87,7 +89,16 @@ There are three problems with that :
 2. It is langage-dependent, as the entry is expressed in the langage chosen by the user at the time.
 3. Depending on the langage (and it is the case in French), it is even gender-dependent, so the string will not be the same depending on the individual settings of the user.
 
-It becomes worse (and almost is a joke at this point), as the string itself changes over time depending on the version of Facebook and the conventions there are applying at the time. 
+It becomes worse (and almost is a joke at this point), as **the string itself changes over time depending on the version of Facebook** and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support, where I found two possible strings describing the anonymous signaling of a publication :
+
+1. "You have anonymously signaled the publication of _xy_ for _abc_ reasons
+    (in French "Vous avez signalé anonymement la publication de _xy_ pour _abc_).
+2. "You have signaled the publication of _xy_ in an anonymous way for _abc_ reasons
+    (in French "Vous avez signalé la publication de _xy_ de manière anonyme pour _abc_).
+
+In consequence, the regular expressions used have to be realy robust in order to work on every string version of the action one is trying to tokenize.
+
+To conclude, the high variability of formats encountered in the Facebook download data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. 
 
 
 
