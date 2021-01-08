@@ -121,7 +121,6 @@ The **corr** function gives the Pearson Coefficient between the `CrimeScores` an
 {% include inbox_group_anonymized.html %}
 
 
-
 ---
 
 # Prospects
