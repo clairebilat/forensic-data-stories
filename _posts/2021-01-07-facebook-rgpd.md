@@ -74,13 +74,15 @@ Many people have done similar projects (but it is a real pain trying to find the
 
 This part of my project is not the most thrilling so I will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my Python script](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
 
-This step definitely was the most painful. Every folder that the Facebook download data contains shows a different structure and it is **mostly nested sub-columns in each row** that are still in JSON format. In consequence, I had to manually review each folder individually and study its structure to extract some useful content, and that has not been automated. 
+This step definitely was the most painful. First, **there is no official documentation available about the organization of the Facebook download data**, and you just have to deduce it by looking at what you have in front of you. To this day, there are still files which I have not been able to extrapolate the meaning of the data they contain. But as you think you have a good idea of what the data represent and you want to use it, you will face the next problem. Indeed, every folder that the Facebook download data contains shows a different structure and it is **mostly nested sub-columns in each row** that are still in JSON format. In consequence, I had to manually review each folder individually and study its structure to extract some useful content, and that has not been automated. 
 Also, the **Facebook download data is incorrecly encoded**. The original data is UTF-8 encoded but was decoded as Latin-1 (no, it's not just me going crazy, [stackoverflow talks about it](https://stackoverflow.com/questions/50008296/facebook-json-badly-encoded)), which I had to take into account each time I wanted to interpret textual values.
 Last but not least, **the data is not well tokenized** and most of them are just strings describing the action resulting in this entry. As an example, I can cite the file containing informations about group memmbership activity (search for the file `groups/your_group_membership_activity.json`). The entries it contains can be two of the following strings :
 
 1. "You became member of group _xy_" 
+    
     (in French "Vous êtes devenue membre de _xy_").
 2. "You stopped being member of group _xy_" 
+    
     (in French "Vous avez arrêté d'être membre de _xy_").
 
 There are three problems with that :
@@ -92,13 +94,17 @@ There are three problems with that :
 It becomes worse (and almost is a joke at this point), as **the string itself changes over time depending on the version of Facebook** and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support, where I found two possible strings describing the anonymous signaling of a publication :
 
 1. "You have anonymously signaled the publication of _xy_ for _abc_ reasons
+    
     (in French "Vous avez signalé anonymement la publication de _xy_ pour _abc_).
 2. "You have signaled the publication of _xy_ in an anonymous way for _abc_ reasons
+    
     (in French "Vous avez signalé la publication de _xy_ de manière anonyme pour _abc_).
 
 In consequence, the regular expressions used have to be realy robust in order to work on every string version of the action one is trying to tokenize.
 
-To conclude, the high variability of formats encountered in the Facebook download data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. 
+To conclude, the high variability of formats encountered in the Facebook download data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. The purpose here being to offer a general understanding of the activity one has on Facebook, I have decided to not loose myself in the gestion of every case I ran into, and did not implement any regular expressions, as it too tightly depends on the account settings of the investigated Facebook user. 
+
+# Dataframes created
 
 
 
