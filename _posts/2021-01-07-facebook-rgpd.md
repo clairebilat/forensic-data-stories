@@ -93,3 +93,7 @@ The **corr** function gives the Pearson Coefficient between the `CrimeScores` an
 # Prospects
 
 Analyse de language dans les messages
+Attention genre poke est pas une fonction qui a tjrs existé
+Utilisateur de Facebook est pas un vrai profil
+Par personne avec + de df genre les commentaires et tout
+par semaine au lieu de par mois
