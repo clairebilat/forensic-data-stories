@@ -72,10 +72,22 @@ Many people have done similar projects (but it is a real pain trying to find the
 
 # Preprocessing
 
-This part of our project is not the most thrilling so we will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my project notebook](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
+This part of our project is not the most thrilling so I will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my Python script](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
 
-It may not be the most thrilling part but it definitely was the most painful. ome of our columns have nested sub-columns in each row that are still in JSON format. 
+This step definitely was the most painful. Every folder that the Facebook download data contains shows a different structure and it is **mostly nested sub-columns in each row** that are still in JSON format. In consequence, I had to manually review each folder individually and study its structure to extract some useful content, and that has not been automated. 
+Also, the **Facebook download data is incorrecly encoded**. The original data is UTF-8 encoded but was decoded as Latin-1 (no, it's not just me going crazy, [stackoverflow talks about it](https://stackoverflow.com/questions/50008296/facebook-json-badly-encoded)), which I had to take into account each time I wanted to interpret textual values.
+Last but not least, **the data is not well tokenized** and most of them are just strings describing the action resulting in this entry. As an example, I can cite the file containing informations about group memmbership activity (search for `groups/your_group_membership_activity.json`). The entries it contains can be two of the following strings :
 
+1. "You became member of group _xy_" (in French "Vous êtes devenue membre de _xy_")
+2. "You stopped being member of group _xy_" (in French "Vous avez arrêté d'être membre de _xy_")
+
+There are three problems with that :
+
+1. You have to manually check every type of entry in the file and apply some regular expressions searches in order to identifiy exactly the action corresponding to the entry ("quit" or "joined").
+2. It is langage-dependent, as the entry is expressed in the langage chosen by the user at the time.
+3. Depending on the langage (and it is the case in French), it is even gender-dependent, so the string will not be the same depending on the individual settings of the user.
+
+It becomes worse (and almost is a joke at this point), as the string itself changes over time depending on the version of Facebook and the conventions there are applying at the time. 
 
 
 
@@ -97,3 +109,5 @@ Attention genre poke est pas une fonction qui a tjrs existé
 Utilisateur de Facebook est pas un vrai profil
 Par personne avec + de df genre les commentaires et tout
 par semaine au lieu de par mois
+encodage du texte latin1 utf8
+nested structures
