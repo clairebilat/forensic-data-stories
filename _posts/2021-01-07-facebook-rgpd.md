@@ -92,7 +92,9 @@ Last but not least, **the data is not well tokenized** and most of them are just
 There are three problems with that :
 
 1. You have to manually check every type of entry in the file and apply some regular expressions searches to identify exactly the action corresponding to the entry ("quit" or "joined").
+    
 2. It is language-dependent, as the entry is expressed in the language chosen by the user at the time.
+    
 3. Depending on the language (and it is the case in French), it is even gender-dependent, so the string will not be the same depending on the individual settings of the user.
 
 It becomes worse (and almost is a joke at this point), as **the string itself changes over time depending on the version of Facebook** and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support, where I found two possible strings describing the anonymous signaling of a publication :
@@ -119,7 +121,7 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
 
 Each Dataframe created was exploited to create a visualization of the monthly count of actions performed by the user, per type of action (see next section). Some of the Dataframes have also been individually exploited to create more detailed visualizations, for example the monthly count of exchanged messages in privates conversations, per interlocutor (also see next section).
 
-Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the file with Excel, or the text will be displayed with encoding errors. To do so, follow these steps:
+Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the CSV files with Excel, or the text will be displayed with encoding errors. To do so, follow these steps:
 
 1. Open a clean data sheet in Excel.
     
@@ -132,15 +134,17 @@ Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the 
     <img src="{{site.github.url}}/assets/img/excel2.PNG">
 
 
-## Vizualisations
+## Visualizations
 
 To navigate those visualizations, you can zoom in or out to adapt the time range displayed, and you can click on the actions displayed at the right of the graph to select the ones you want to display.
 
 ### Monthly count of Facebook actions, per action (std between 1 and 10)
 
-I chose to limit the visualization to the actions showing a standard deviation of monthly count between 1 and 10 so that the visual comparison would be easier. As those are the regular actions that are not performed on a daily basis by the user, it helps to gain a general understanding of the usage of the Facebook profile.
+I chose to limit the visualization to the actions showing a standard deviation of monthly count between 1 and 10 so that the visual comparison would be easier. As those are the regular actions performed by the user that are not performed on a daily basis (like adding new friends or liking new pages in my case), it helps to gain a general understanding of the usage of the Facebook profile.
 
 {% include month_count_actions_1-std-10.html %}
+
+In my data, you can for example see that I liked pages mostly between 2016 and 2018, with a high peak in January 2017 where I liked 52 pages. Most of the friend requests I rejected took place between end of 2015 and mid-2016. I don't really explain those observations but they could still be of value for investigators, as it helps targeting some unusual activity. Some precautions have to be taken when interpreting those data. For example, my `poking` activity only lasts until end of 2018. It can easily be explained with the fact that Facebook removed this functionality at the time. 
 
 ### Monthly count of Facebook actions, per action (std higher than 10)
 
@@ -148,7 +152,7 @@ Here are illustrated the actions showing a standard deviation of monthly count h
 
 {% include month_count_actions_10-std.html %}
 
-Many observations can be made. As you can see when displaying the `msg_requests`action, I have a big peak of message requests in September 2018, and almost none the other months. I checked my inbox by curiosity, and it turns out that, in September 2018, people I did not know added me in a group conversation. Before I had the time to decline the invitation, they sent almost 500 messages in this conversation, and then deleted me from it. That explains this anomaly. When displaying `archived_threads`, you can see that I also have enormous peaks between June and September 2017 and almost nothing in the other months. During this period, I actually quit the associative role that I had since January 2017 and archived the conservations I had with my colleagues, also explaining this anomaly.
+Many observations can be made. As you can see when displaying the `msg_requests` action, I have a big peak of message requests in September 2018, and almost none the other months. I checked my inbox out of curiosity, and it turns out that, in September 2018, people I did not know added me in a group conversation. Before I had the time to decline the invitation, they sent almost 500 messages in this conversation, and then deleted me from it. That explains this anomaly. When displaying `archived_threads`, you can see that I also have enormous peaks between June and September 2017 and almost nothing in the other months. During this period, I actually quit the associative role that I had since January 2017 and archived the conservations I had with my colleagues, also explaining this anomaly. As you can see, I easily targeted unusual activity based on the visualization and could rapidly check in the data the cause of this activity, which could be helpful to investigators.
 
 
 ### Monthly count of exchanged messages in private conversations, per interlocutor (total count in top10 or one month count in top10)
@@ -157,7 +161,7 @@ Here are illustrated the monthly count of messages I exchanged in private conver
 
 {% include inbox_conv_anonymized.html %}
 
-Please be careful to note that the user "Utilisateur de Facebook" in French (probably "Facebook user" in English) often appears in this graph but is only an aggregation of every conversation where the interlocutor deleted his profile, making his name unavailable. 
+It is a bit difficult to make conclusions based on the anonymized version of this visualization, but I encourage you to do the same with your data. Also, please be careful to note that the user "Utilisateur de Facebook" in French (probably "Facebook user" in English) often appears in this graph but is only an aggregation of every conversation where the interlocutor deleted his profile, making his name unavailable. This visualization helps quickly identify the people often contacted by the user (with Facebook) and could help target the next person to interview in an investigation.
 
 ### Monthly count of exchanged messages in group conversations, per interlocutor (total count in top10 or one month count in top10)
 
@@ -165,7 +169,7 @@ The same has been performed for group conversations.
 
 {% include inbox_group_anonymized.html %}
 
-We can see that I have almost no group conversations, apart from the period of January to September 2017. Again, those conversations are related to the associative role I had at the time and explain this activity. 
+We can see that I have almost no group conversations, apart from the period of January to September 2017. Again, those conversations are related to the associative role I had at the time and explain this activity. Also, it shows that unusual activity can easily be targeted based on the visualization and can rapidly be checked in the data.
 
 ### Monthly count of posted messages in groups, per group (total count in top10)
 
