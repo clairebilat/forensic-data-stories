@@ -103,9 +103,13 @@ In consequence, the regular expressions used have to be really robust in order t
 
 To conclude, the high variability of formats encountered in the Facebook download data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. The purpose here being to offer a general understanding of the activity one has on Facebook, I have decided to not loose myself in the gestion of every case I ran into, and did not implement any regular expressions, as it too tightly depends on the account settings of the investigated Facebook user. 
 
-# Dataframes created
+# Results
 
-## How to open them
+In order to see your results, you first have to run my script (available [here](https://github.com/clairebilat/facebook-GDPR)). Just put the file `facebook_script.py` in the folder where you store each Facebook download data folder, open this destination in a terminal, make sure you have `python` and `pip` installed and that they are in the PATH environnement variable. Then run the command `pip install pandas datetime plotly`. Then, you will just have to run the command `python ./facebook_script.py %folder_name%`, replacing "folder_name" by the name of the Facebook download data folder you want to analyze. The results will be stored in a newly created folder `%folder_name%_results`.
+
+## Dataframes created
+
+### How to open them
 
 After cleaning the data I wanted to use, I saved them into Dataframes and then into `csv` files. Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the file with Excel, or the text will be displayed with encoding errors. To do so, follow these steps :
 
@@ -119,9 +123,10 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
     
     <img src="{{site.github.url}}/assets/img/excel2.PNG">
 
+Note that I chose to cosntruct Dataframes fron JSON files that I identified as pertinent based on the 4 accounts I had at disposal. It is not an exhaustive list of the information you can retrieve from the Facebook download data and should be adapted to your case.
 
 
-## What they contain
+### What they contain
 
 1. `apps_and_websites`
     
@@ -192,32 +197,54 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
     
 22. `received_friend_requests`
     
+    This Dataframe contains the friend requests the user received. It has been used to vizualise the general activity of a user. Please note that once they have been accepted or denied, they are not present in this Dataframe anymore. The data represents therefore the pending requests.
+    
 23. `rejected_friend_requests`
+    
+    This Dataframe contains the friend requests the user rejected. It has been used to vizualise the general activity of a user. 
     
 24. `removed_friends`
     
+    This Dataframe contains the friend the user removed. It has been used to vizualise the general activity of a user. 
+    
 25. `search_history`
+    
+    This Dataframe contains every search performed by the Facebook user. I have exploited this to plot the monthly count of searches per typed text (see next section).
     
 26. `sent_friend_requests`
     
+    This Dataframe contains the friend requests the user sent. It has been used to vizualise the general activity of a user. 
+
 27. `support`
     
+    This Dataframe contains every request the user made to Facebook support, including anonym denonciations of posts or comments. It has forensic value in some cases like online harassment and should be manually reviewed by the investigator.
+    
 28. `unfollowed_pages`
+
+    This Dataframe contains every page the user unfollowed.
     
 29. `visites_de_profil`
+
+   To be honest, I don't really know what represents this Dataframe...
     
 30. `visites_sur_la_page`
     
+   To be honest, I don't really know what represents this Dataframe...
+    
 31. `voir_en_premier`
+
+   This Dataframe contains every profile the user chose to see first in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
     
 32. `voir_moins`
+   
+   This Dataframe contains every profile the user chose to see last in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
     
 33. `your_pages`
+
+   This Dataframe contains every page where the user is administrator. That has high forensic value and should be manually reviewd by the investigator.
     
-Note that I chose those based on the 4 accounts I had and it is not an exhaustive list of the information you can retrieve from the Facebook download data.
 
-
-# Results
+## Vizualisations
 
 The **corr** function gives the Pearson Coefficient between the `CrimeScores` and the `Community Areas`.
 
