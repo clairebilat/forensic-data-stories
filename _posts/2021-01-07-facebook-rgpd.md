@@ -106,6 +106,8 @@ To conclude, the high variability of formats encountered in the Facebook downloa
 
 # Dataframes created
 
+## How to open them
+
 After cleaning the data I wanted to use, I saved them into Dataframes and then into `csv` files. Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the file with Excel, or the text will be displayed with encoding errors. To do so, follow these steps :
 
 1. Open a clean data sheet in Excel.
@@ -117,6 +119,10 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
 3. There, you can select the desired `File origin` and you are ready to go.
     
     <img src="{{site.github.url}}/assets/img/excel2.PNG">
+
+
+
+## What they contain
 
 1. `apps_and_websites`
     
@@ -185,6 +191,8 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
     
 33. `your_pages`
     
+Note that I chose those based on the 4 accounts I had and it is not an exhaustive list of the information you can retrieve from the Facebook download data.
+
 
 # Results
 
