@@ -46,9 +46,8 @@ The dataset used is the one I downloaded from Facebook containing a copy of my i
 ## About the purpose of this project
 
 
-The main research question was : **where to eat *safely* in Chicago ?**
+The purpose here is to write a script automating the processing and output of some basic vizualisations of Facebook GDPR data to help investigators grab a general idea of one's Facebook profile and its content without having to put too much work into it. That way, they can have leads about which people are the most involved in the Facebook activity of the user, and to wich extent the user is active on Facebook. Those information can be used to orient the investigation and help prioritize the actions taken.
 
-The 
 
 # Litterature review (or how what I wanted to do had already be done but I did it anyway)
 
@@ -126,46 +125,71 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
 
 1. `apps_and_websites`
     
-    This Dataframe contains information about the apps that have been linked to the considered Facebook account. It has forensic value as it can orient the investigator to other soruce of traces and potential valuable information. 
+    This Dataframe contains information about the apps that have been linked to the considered Facebook account. It has forensic value as it can orient the investigator to other source of traces and potential valuable information. 
+    
 2. `archived_threads`
     
-3. `comments`
+    This Dataframe contains the group discussions that the user has left. It has not been used here for independent vizualisations as my account did not have many different deleted group conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
     
-4. `comments_in_groups`
+3. `comments_in_groups`
     
-5. `event_invitations`
+    This Dataframe contains every action (post or comment) the user posted in groups. The group name is already tokenized and has been exploited to produce a vizualisation of the monthly post/comment count per group (see next section). This can be used to see if the user is very active in some groups that could be related to specific activities (illegal sale, harrassment, ...). 
     
-6. `events_declined`
+4. `comments`
     
-7. `events_interested`
+    This Dataframe contains every comment the user posted on profiles or pages. It has not been vizualised as the action is not tokenized and neither the comment nor the page or the profile can easily be extracted.
     
-8. `events_joined`
+5. `event_invitations`, `events_declined`, `events_interested`, `events_joined` and `events_visited`
     
-9. `events_visited`
+    These Dataframes contain information about the events the user has been invited to, the ones he declined, the ones he expressed his interest about, the ones he joined and the ones he visited the event page. Those have forensic value to check if the user expressed interest in events panning illegal activites and should be manually reviewed by the ivnestigator.
     
 10. `filtered_threads`
     
+    These Dataframe contains message requests that have been declined by the user. It has not been used here for independent vizualisations as my account did not have many different deleted group conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
+    
 11. `followed_pages`
+    
+    This Dataframe contains the pages that the user follow. It has been used to vizualise the general activity of a user. 
     
 12. `following`
     
+    This Dataframe contains the people that the user follow. It has been used to vizualise the general activity of a user. 
+    
 13. `friends`
+    
+    This Dataframe contains the user's friends. It has been used to vizualise the general activity of a user. 
      
 14. `groups_joined`
     
+    This Dataframe contains the groups in which the user has taken part. Be careful, if the user has left the group, only one entry remains in the Dataframe and the timestamp corresponds to the leaving. It has been used to vizualise the general activity of a user. 
+    
 15. `groups_visited`
+    
+    This Dataframe contains the groups which the user has displayed. It has been used to vizualise the general activity of a user. 
     
 16. `inbox`
     
+    This Dataframe contains the messages that the user exchanged in conversations. Two vizualisations have been made based on this Dataframe; one illustrating the monthly exchanged message count for group conversations and the other one for private conversations (between the user and only one other person).
+    
 17. `liked_pages`
     
+    This Dataframe contains information about the pages the user has liked. Those have forensic value to check if the user expressed interest in topics of interest regarding the investigation and should be manually reviewed by the ivnestigator.
+    
 18. `liked_posts_and_comments`
+   
+   This Dataframe contains every Facebook reaction (HAHA, LIKE, LOVE, WOW, etc.) the user selected on various posts. It has been used to vizualise the general activity of a user. 
     
 19. `msg_requests`
+
+    This Dataframe contains every message sent as a request from people that were not in the user's friends list. It has been used to vizualise the general activity of a user. 
     
 20. `people`
+   
+   To be honest, I don't really know what represents this Dataframe...
     
 21. `pokes`
+
+   This Dataframe contains every poke exchanged by the user. Please note that `poking` is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user sudenly stops.
     
 22. `received_friend_requests`
     
