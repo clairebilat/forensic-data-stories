@@ -112,7 +112,7 @@ To conclude, the high variability of formats encountered in the Facebook downloa
 
 The **corr** function gives the Pearson Coefficient between the `CrimeScores` and the `Community Areas`.
 
-{% include month_count_actions_1-std-10.html %}
+
 
 {% include month_count_actions_10-std.html %}
 
