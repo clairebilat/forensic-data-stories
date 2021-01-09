@@ -165,7 +165,11 @@ We can see that I have alsmot no group conevrsations, apart from the period of J
 
 ### Monthly count of posted messages in groups, per group (total count in top10)
 
+{% include groups_comment_anonymized.html %}
+
 ### Monthly count of searched items, per item (total count in top10 or one month in top10)
+
+{% include searches_anon.html %}
 
 What we can observe is for example the 9th searched term being regularly searched for a really long period of time.
 
