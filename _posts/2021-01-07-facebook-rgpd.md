@@ -193,7 +193,7 @@ Note that I chose to cosntruct Dataframes fron JSON files that I identified as p
     
 17. `pokes`
     
-   This Dataframe contains every poke exchanged by the user. Please note that `poking` is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user sudenly stops.
+    This Dataframe contains every poke exchanged by the user. Please note that `poking` is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user sudenly stops.
     
 18. `received_friend_requests`
     
@@ -225,23 +225,23 @@ Note that I chose to cosntruct Dataframes fron JSON files that I identified as p
     
 25. `visites_de_profil`
     
-   To be honest, I don't really know what represents this Dataframe...
+    To be honest, I don't really know what represents this Dataframe...
     
 26. `visites_sur_la_page`
     
-   To be honest, I don't really know what represents this Dataframe...
-    
+    To be honest, I don't really know what represents this Dataframe...
+     
 27. `voir_en_premier`
     
-   This Dataframe contains every profile the user chose to see first in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
+    This Dataframe contains every profile the user chose to see first in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
     
 28. `voir_moins`
-   
-   This Dataframe contains every profile the user chose to see last in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
+    
+    This Dataframe contains every profile the user chose to see last in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
     
 29. `your_pages`
     
-   This Dataframe contains every page where the user is administrator. That has high forensic value and should be manually reviewd by the investigator.
+    This Dataframe contains every page where the user is administrator. That has high forensic value and should be manually reviewd by the investigator.
     
 
 ## Vizualisations
