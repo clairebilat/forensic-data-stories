@@ -176,11 +176,10 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
     This Dataframe contains information about the pages the user has liked. Those have forensic value to check if the user expressed interest in topics of interest regarding the investigation and should be manually reviewed by the ivnestigator.
     
 18. `liked_posts_and_comments`
-   
-   This Dataframe contains every Facebook reaction (HAHA, LIKE, LOVE, WOW, etc.) the user selected on various posts. It has been used to vizualise the general activity of a user. 
+    This Dataframe contains every Facebook reaction (HAHA, LIKE, LOVE, WOW, etc.) the user selected on various posts. It has been used to vizualise the general activity of a user. 
     
 19. `msg_requests`
-
+    
     This Dataframe contains every message sent as a request from people that were not in the user's friends list. It has been used to vizualise the general activity of a user. 
     
 20. `people`
@@ -188,7 +187,7 @@ After cleaning the data I wanted to use, I saved them into Dataframes and then i
    To be honest, I don't really know what represents this Dataframe...
     
 21. `pokes`
-
+    
    This Dataframe contains every poke exchanged by the user. Please note that `poking` is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user sudenly stops.
     
 22. `received_friend_requests`
