@@ -111,12 +111,9 @@ In order to see your results, you first have to run my script (available [here](
 
 ## Dataframes created
 
-After cleaning the data I wanted to use, I saved them into Dataframes and then into `csv` files. Each of those CSV files can be found in the results folder **if** the corresponding JSON file was available in the Facebook download data folder. Those CSV files and their content are described below. Note that I chose to cosntruct Dataframes fron JSON files that I identified as pertinent based on the four Facebook accounts I had at disposal. It is not an exhaustive list of the information you can retrieve from the Facebook download data and should be adapted to your case.
+After cleaning the data I wanted to use, I saved them into Dataframes and then into `csv` files. Each of those CSV files can be found in the results folder **if** the corresponding JSON file was available in the Facebook download data folder. Those CSV files and their content are described at the end of this article. Note that I chose to construct Dataframes from the JSON files that I identified as pertinent based on the four Facebook accounts I had at disposal. It is not an exhaustive list of the information you can retrieve from the Facebook download data and should be adapted to your case.
 
 Each Dataframe created was exploited to create a vizualisation of the monthly count of actions performed by the user, per type of action (see next section). Some of the Dataframes have also been individually exploited to create more detailled vizualisations, for example the monthly count of exchanged messages in privates conversations, per interlocutor (also see next section).
-
-
-### How to open them
 
 Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the file with Excel, or the text will be displayed with encoding errors. To do so, follow these steps:
 
@@ -131,7 +128,63 @@ Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the 
     <img src="{{site.github.url}}/assets/img/excel2.PNG">
 
 
-### What they contain
+## Vizualisations
+
+To navigate those vizualisations, you can zoom in or out to adapt the time range displayed, and you can click on the actions displayed at the right of the graph to select the ones you want to display.
+
+### Monthly count of Facebook actions, per action (std between 1 and 10)
+
+I chose to limit the vizualisation to the actions showing a standard deviation of monthly count between 1 and 10, so that the visual comparison would be easier. As those are the regular actions that are not performed on a daily basis by the user, it helps to gain a general undestanding of the usage of the Facebook profile.
+
+{% include month_count_actions_1-std-10.html %}
+
+### Monthly count of Facebook actions, per action (std higher than 10)
+
+Here are illustrated the actions showing a standard deviation of monthly count higher than 10. Those are the actions performed on a daily basis by the user, and any irregularities in them can be of interest.
+
+{% include month_count_actions_10-std.html %}
+
+Many observations can be made. As you can see when displaying the `msg_requests`action, I have a big peak of message requests on September 2018, and almost none the other months. I checked my inbox by curiosity, and it turns out that, in september 2018, people I did not know added me in a group conversation. Before I had the time to decline the invitation, they sent almost 500 messages in this conversation, and then deleted me of it. That explains this anomality. When displaying `archived_threads`, you can see that I also have enormous peaks between June and September 2017 and almost nothing the other months. During this period, I actually quit the associative role that I had since January 2017, and archived the conservations I had with my colleagues, also explaining this anomality.
+
+
+### Monthly count of exchanged messages in private conversations, per interlocutor (total count in top10 or one month count in top10)
+
+Here are illustrated the monthly count of messages I exchanged in private conversations (meaning in conversations with only one other person than me). I chose to limit the interlocutors represented to the 10 with whom I exchanged the most messages in total, and/or the 10 with whom I exchanged the most messages in one month. I replaced the names of my interlocutors by numbers for obvious reasons.
+
+{% include inbox_conv_anonymized.html %}
+
+Please be careful to note that the user "Utilisateur de Facebook" in French (probably "Facebook user" in english) often appears in this graph but is only an aggregation of every conversation where the interlocutor deleted his profile, making his name unavailable. 
+
+### Monthly count of exchanged messages in group conversations, per interlocutor (total count in top10 or one month count in top10)
+
+The same has been performed for group conversations.
+
+{% include inbox_group_anonymized.html %}
+
+We can see that I have alsmot no group conevrsations, apart from the period of January to September 2017. Again, those conversations are related to the associative role I had at the time and explain this activity. 
+
+### Monthly count of posted messages in groups, per group (total count in top10)
+
+### Monthly count of searched items, per item (total count in top10 or one month in top10)
+
+What we can observe is for example the 9th searched term being regularly searched for a really long period of time.
+
+---
+
+# Prospects
+
+Analyse de language dans les messages
+Attention genre poke est pas une fonction qui a tjrs existé
+Utilisateur de Facebook est pas un vrai profil
+Par personne avec + de df genre les commentaires et tout
+par semaine au lieu de par mois
+encodage du texte latin1 utf8
+nested structures
+
+---
+
+
+# Description of the `CSV` files created
 
 1. `apps_and_websites`
     
@@ -248,28 +301,3 @@ Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the 
     
     This Dataframe contains every page where the user is administrator. That has high forensic value and should be manually reviewed by the investigator.
     
-
-## Vizualisations
-
-### 
-
-{% include month_count_actions_1-std-10.html %}
-
-{% include month_count_actions_10-std.html %}
-
-{% include inbox_conv_anonymized.html %}
-
-{% include inbox_group_anonymized.html %}
-
-
----
-
-# Prospects
-
-Analyse de language dans les messages
-Attention genre poke est pas une fonction qui a tjrs existé
-Utilisateur de Facebook est pas un vrai profil
-Par personne avec + de df genre les commentaires et tout
-par semaine au lieu de par mois
-encodage du texte latin1 utf8
-nested structures
