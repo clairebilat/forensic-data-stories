@@ -148,99 +148,99 @@ Note that I chose to cosntruct Dataframes fron JSON files that I identified as p
     
     These Dataframes contain information about the events the user has been invited to, the ones he declined, the ones he expressed his interest about, the ones he joined and the ones he visited the event page. Those have forensic value to check if the user expressed interest in events panning illegal activites and should be manually reviewed by the ivnestigator.
     
-10. `filtered_threads`
+6. `filtered_threads`
     
     These Dataframe contains message requests that have been declined by the user. It has not been used here for independent vizualisations as my account did not have many different deleted group conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
     
-11. `followed_pages`
+7. `followed_pages`
     
     This Dataframe contains the pages that the user follow. It has been used to vizualise the general activity of a user. 
     
-12. `following`
+8. `following`
     
     This Dataframe contains the people that the user follow. It has been used to vizualise the general activity of a user. 
     
-13. `friends`
+9. `friends`
     
     This Dataframe contains the user's friends. It has been used to vizualise the general activity of a user. 
      
-14. `groups_joined`
+10. `groups_joined`
     
     This Dataframe contains the groups in which the user has taken part. Be careful, if the user has left the group, only one entry remains in the Dataframe and the timestamp corresponds to the leaving. It has been used to vizualise the general activity of a user. 
     
-15. `groups_visited`
+11. `groups_visited`
     
     This Dataframe contains the groups which the user has displayed. It has been used to vizualise the general activity of a user. 
     
-16. `inbox`
+12. `inbox`
     
     This Dataframe contains the messages that the user exchanged in conversations. Two vizualisations have been made based on this Dataframe; one illustrating the monthly exchanged message count for group conversations and the other one for private conversations (between the user and only one other person).
     
-17. `liked_pages`
+13. `liked_pages`
     
     This Dataframe contains information about the pages the user has liked. Those have forensic value to check if the user expressed interest in topics of interest regarding the investigation and should be manually reviewed by the ivnestigator.
     
-18. `liked_posts_and_comments`
+14. `liked_posts_and_comments`
     This Dataframe contains every Facebook reaction (HAHA, LIKE, LOVE, WOW, etc.) the user selected on various posts. It has been used to vizualise the general activity of a user. 
     
-19. `msg_requests`
+15. `msg_requests`
     
     This Dataframe contains every message sent as a request from people that were not in the user's friends list. It has been used to vizualise the general activity of a user. 
     
-20. `people`
-   
-   To be honest, I don't really know what represents this Dataframe...
+16. `people`
     
-21. `pokes`
+    To be honest, I don't really know what represents this Dataframe...
+    
+17. `pokes`
     
    This Dataframe contains every poke exchanged by the user. Please note that `poking` is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user sudenly stops.
     
-22. `received_friend_requests`
+18. `received_friend_requests`
     
     This Dataframe contains the friend requests the user received. It has been used to vizualise the general activity of a user. Please note that once they have been accepted or denied, they are not present in this Dataframe anymore. The data represents therefore the pending requests.
     
-23. `rejected_friend_requests`
+19. `rejected_friend_requests`
     
     This Dataframe contains the friend requests the user rejected. It has been used to vizualise the general activity of a user. 
     
-24. `removed_friends`
+20. `removed_friends`
     
     This Dataframe contains the friend the user removed. It has been used to vizualise the general activity of a user. 
     
-25. `search_history`
+21. `search_history`
     
     This Dataframe contains every search performed by the Facebook user. I have exploited this to plot the monthly count of searches per typed text (see next section).
     
-26. `sent_friend_requests`
+22. `sent_friend_requests`
     
     This Dataframe contains the friend requests the user sent. It has been used to vizualise the general activity of a user. 
-
-27. `support`
+    
+23. `support`
     
     This Dataframe contains every request the user made to Facebook support, including anonym denonciations of posts or comments. It has forensic value in some cases like online harassment and should be manually reviewed by the investigator.
     
-28. `unfollowed_pages`
-
+24. `unfollowed_pages`
+    
     This Dataframe contains every page the user unfollowed.
     
-29. `visites_de_profil`
-
-   To be honest, I don't really know what represents this Dataframe...
-    
-30. `visites_sur_la_page`
+25. `visites_de_profil`
     
    To be honest, I don't really know what represents this Dataframe...
     
-31. `voir_en_premier`
-
+26. `visites_sur_la_page`
+    
+   To be honest, I don't really know what represents this Dataframe...
+    
+27. `voir_en_premier`
+    
    This Dataframe contains every profile the user chose to see first in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
     
-32. `voir_moins`
+28. `voir_moins`
    
    This Dataframe contains every profile the user chose to see last in his feed. This could be of interest depending on the case and should be manually reviewd by the investigator.
     
-33. `your_pages`
-
+29. `your_pages`
+    
    This Dataframe contains every page where the user is administrator. That has high forensic value and should be manually reviewd by the investigator.
     
 
