@@ -100,19 +100,84 @@ It becomes worse (and almost is a joke at this point), as **the string itself ch
     
     (in French "Vous avez signalé la publication de _xy_ de manière anonyme pour _abc_).
 
-In consequence, the regular expressions used have to be realy robust in order to work on every string version of the action one is trying to tokenize.
+In consequence, the regular expressions used have to be really robust in order to work on every string version of the action one is trying to tokenize.
 
 To conclude, the high variability of formats encountered in the Facebook download data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. The purpose here being to offer a general understanding of the activity one has on Facebook, I have decided to not loose myself in the gestion of every case I ran into, and did not implement any regular expressions, as it too tightly depends on the account settings of the investigated Facebook user. 
 
 # Dataframes created
 
-
+1. `apps_and_websites`
+    
+2. `archived_threads`
+    
+3. `comments`
+    
+4. `comments_in_groups`
+    
+5. `event_invitations`
+    
+6. `events_declined`
+    
+7. `events_interested`
+    
+8. `events_joined`
+    
+9. `events_visited`
+    
+10. `filtered_threads`
+    
+11. `followed_pages`
+    
+12. `following`
+    
+13. `friends`
+     
+14. `groups_joined`
+    
+15. `groups_visited`
+    
+16. `inbox`
+    
+17. `liked_pages`
+    
+18. `liked_posts_and_comments`
+    
+19. `msg_requests`
+    
+20. `people`
+    
+21. `pokes`
+    
+22. `received_friend_requests`
+    
+23. `rejected_friend_requests`
+    
+24. `removed_friends`
+    
+25. `search_history`
+    
+26. `sent_friend_requests`
+    
+27. `support`
+    
+28. `unfollowed_pages`
+    
+29. `visites_de_profil`
+    
+30. `visites_sur_la_page`
+    
+31. `voir_en_premier`
+    
+32. `voir_moins`
+    
+33. `your_pages`
+    
 
 # Results
 
 The **corr** function gives the Pearson Coefficient between the `CrimeScores` and the `Community Areas`.
 
-
+{% include month_count_actions_1-std-10.html %}
 
 {% include month_count_actions_10-std.html %}
 
