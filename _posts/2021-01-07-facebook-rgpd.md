@@ -106,8 +106,21 @@ To conclude, the high variability of formats encountered in the Facebook downloa
 
 # Dataframes created
 
+After cleaning the data I wanted to use, I saved them into Dataframes and then into `csv` files. Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the file with Excel, or the text will be displayed with encoding errors. To do so, follow these steps :
+
+1. Open a clean data sheet in Excel.
+    
+2. Select the `Data`tab and click on `From a text file/CSV`.
+    
+    <img src="{{site.github.url}}/assets/img/excel1.PNG">
+    
+3. There, you can select the desired `File origin` and you are ready to go.
+    
+    <img src="{{site.github.url}}/assets/img/excel2.PNG">
+
 1. `apps_and_websites`
     
+    This Dataframe contains information about the apps that have been linked to the considered Facebook account. It has forensic value as it can orient the investigator to other soruce of traces and potential valuable information. 
 2. `archived_threads`
     
 3. `comments`
