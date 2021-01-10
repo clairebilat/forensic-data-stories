@@ -181,17 +181,19 @@ We can see that I have almost no group conversations, apart from the period of J
 
 What we can observe is for example the 9th searched term being regularly searched for a really long period of time.
 
+
+# Conclusion
+
+I hope I could convince you that such a script is easy to implement and of added value in an investigation. Moreover, some Dataframes I cleaned based on the JSON files I had are intrisically pertinent and should manually reviewed, for example the list of apps linked to the account, the list of events joined, or the list of pages administred by the user (see at the end of this article for an exhaustive list of every Dataframe created with my script). 
+
 ---
 
 # Prospects
 
-Analyse de language dans les messages
-Attention genre poke est pas une fonction qui a tjrs existé
-Utilisateur de Facebook est pas un vrai profil
-Par personne avec + de df genre les commentaires et tout
-par semaine au lieu de par mois
-encodage du texte latin1 utf8
-nested structures
+What I initially wanted to do but had to let go because of the problematic raised in the Preprocessing Section was to create a timeline of actions per friend, combining many sources of information like when did the user and the friend connected, their inbox, but also the comments they posted on each other posts, the events they inveted each other at, etc. It was too difficult extracting the friend's name from many of those sources so I limited myself to the sources presented in the Visualization Section.
+
+What would be very beneficial from an investigative point of view would be to perfom some Natural Language Processing on the textual sources like the inbox, the comments, etc., to begin to know better the topics of interest and the vocabulary/intentions of the user. Also, this could help narrow down the friends with whom the user actually have conversations/activities of interest, which would also be useful.
+
 
 ---
 
