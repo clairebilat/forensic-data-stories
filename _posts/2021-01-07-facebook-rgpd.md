@@ -144,7 +144,7 @@ I chose to limit the visualization to the actions showing a standard deviation o
 
 {% include month_count_actions_1-std-10.html %}
 
-In my data, you can for example see that I liked pages mostly between 2016 and 2018, with a high peak in January 2017 where I liked 52 pages. Most of the friend requests I rejected took place between end of 2015 and mid-2016. I don't really explain those observations but they could still be of value for investigators, as it helps targeting some unusual activity. Some precautions have to be taken when interpreting those data. For example, my `poking` activity only lasts until end of 2018. It can easily be explained with the fact that Facebook removed this functionality at the time. 
+In my data, you can for example see that I liked pages mostly between 2016 and 2018, with a high peak in January 2017 where I liked 52 pages. Most of the friend requests I rejected took place between the end of 2015 and mid-2016. I don't really explain those observations but they could still be of value for investigators, as it helps to target some unusual activity. Some precautions have to be taken when interpreting those data. For example, my `poking` activity only lasts until the end of 2018. It can easily be explained by the fact that Facebook removed this functionality at the time. 
 
 ### Monthly count of Facebook actions, per action (std higher than 10)
 
@@ -184,15 +184,15 @@ What we can observe is for example the 9th searched term being regularly searche
 
 # Conclusion
 
-I hope I could convince you that such a script is easy to implement and of added value in an investigation. Moreover, some Dataframes I cleaned based on the JSON files I had are intrisically pertinent and should manually reviewed, for example the list of apps linked to the account, the list of events joined, or the list of pages administred by the user (see at the end of this article for an exhaustive list of every Dataframe created with my script). 
+I hope I could convince you that such a script is easy to implement and of added value in an investigation. Moreover, some Dataframes I cleaned based on the JSON files I had are intrinsically pertinent and should manually be reviewed, for example the list of apps linked to the account, the list of events joined, or the list of pages administred by the user (see at the end of this article for an exhaustive list of every Dataframe created with my script). 
 
 ---
 
 # Prospects
 
-What I initially wanted to do but had to let go because of the problematic raised in the Preprocessing Section was to create a timeline of actions per friend, combining many sources of information like when did the user and the friend connected, their inbox, but also the comments they posted on each other posts, the events they inveted each other at, etc. It was too difficult extracting the friend's name from many of those sources so I limited myself to the sources presented in the Visualization Section.
+What I initially wanted to do but had to let go because of the problems raised in the Preprocessing Section was to create a timeline of actions per friend, combining many sources of information like when did the user and the friend connected, their inbox, but also the comments they posted on each other posts, the events they invited each other at, etc. It was too difficult extracting the friend's name from many of those sources so I limited myself to the sources presented in the Visualization Section.
 
-What would be very beneficial from an investigative point of view would be to perfom some Natural Language Processing on the textual sources like the inbox, the comments, etc., to begin to know better the topics of interest and the vocabulary/intentions of the user. Also, this could help narrow down the friends with whom the user actually have conversations/activities of interest, which would also be useful.
+What would be very beneficial from an investigative point of view would be to perform some Natural Language Processing on the textual sources like the inbox, the comments, etc., to begin to know better the topics of interest and the vocabulary/intentions of the user. Also, this could help narrow down the friends with whom the user actually have conversations/activities of interest, which would also be useful.
 
 
 ---
@@ -246,7 +246,7 @@ What would be very beneficial from an investigative point of view would be to pe
     
 12. `inbox`
     
-    This Dataframe contains the messages that the user exchanged in conversations. Two visualiztions have been made based on this Dataframe; one illustrating the monthly exchanged message count per group conversation and the other one per private conversations (see next section).
+    This Dataframe contains the messages that the user exchanged in conversations. Two visualizations have been made based on this Dataframe; one illustrating the monthly exchanged message count per group conversation and the other one per private conversations (see next section).
     
 13. `liked_pages`
     
