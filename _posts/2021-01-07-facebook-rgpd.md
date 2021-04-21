@@ -74,7 +74,7 @@ Basically, before being able to analyze the data, I had to preprocess it and ref
 
 Also, the textual information in the Facebook Download Data is incorrectly encoded. The original data is UTF-8 encoded but was decoded as Latin-1 (no, it is not just me going crazy, [_StackOverflow_ talks about it](https://stackoverflow.com/questions/50008296/facebook-json-badly-encoded)), which I had to take into account each time I wanted to interpret textual values.
 
-Last but not least, the data is not well tokenized and most of them are just textual strings describing the action resulting in this entry. As an example, I can cite the file containing information about group membership activity (search for the file `groups/your\_group\_membership\_activity.json`). The entries it contains can be at least two of the following strings:
+Last but not least, the data is not well tokenized and most of them are just textual strings describing the action resulting in this entry. As an example, I can cite the file containing information about group membership activity (search for the file `groups/your_group_membership_activity.json`). The entries it contains can be at least two of the following strings:
 
 
 1. "You became a member of group _xy_" (in French "Vous êtes devenue membre de _xy_").
@@ -89,7 +89,7 @@ There are three problems with that :
     
 3. Depending on the language (and it is the case in French), it is even gender-dependent, so the string will not be the same depending on the individual settings of the user.
 
-It becomes worse, as the string itself changes over time depending on the version of Facebook and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support (search for the file `other\_activity/support\_correspondences.json`), where I found two possible strings describing the anonymous signaling of a publication :
+It becomes worse, as the string itself changes over time depending on the version of Facebook and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support (search for the file `other_activity/support_correspondences.json`), where I found two possible strings describing the anonymous signaling of a publication :
 
 1. "You have anonymously signaled the publication of _xy_ for _abc_ reasons" (in French "Vous avez signalé anonymement la publication de _xy_ pour _abc_").
     
@@ -99,19 +99,15 @@ In consequence, the regular expressions used must be really robust in order to w
 
 To conclude, the high variability of formats encountered in the Facebook Download Data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. The purpose here being to offer a general understanding of the activity one has on Facebook, I decided to not lose myself in the management of every case I ran into and did not implement any regular expressions, as it too tightly depends on the account settings of the investigated Facebook user.
 
-I wrote a Python script available [online](https://github.com/clairebilat/facebook-GDPR). Put the file facebook_script.py in the folder where you store your Facebook Download Data folder and open this destination in a terminal. Make sure you have Python and Pip installed and that they are in the PATH environment variable. Then run the command _pip install pandas datetime plotly_. Lastly, you will just have to run the command _python ./facebook\_script.py %folder\_name%_, replacing `%folder\_name%` by the name of the Facebook Download Data folder you want to analyze. The results will be stored in a newly created folder `%folder\_name%\_results`.
+I wrote a Python script available [online](https://github.com/clairebilat/facebook-GDPR). Put the file facebook_script.py in the folder where you store your Facebook Download Data folder and open this destination in a terminal. Make sure you have Python and Pip installed and that they are in the PATH environment variable. Then run the command _pip install pandas datetime plotly_. Lastly, you will just have to run the command _python ./facebook\_script.py %folder\_name%_, replacing `%folder_name%` by the name of the Facebook Download Data folder you want to analyze. The results will be stored in a newly created folder `%folder_name%_results`.
 
-# Results
+# But what is this script useful for?
 
-To see your results, you first have to run my script (available [here](https://github.com/clairebilat/facebook-GDPR)). Just put the file `facebook_script.py` in the folder where you store each Facebook download data folder, open this destination in a terminal, make sure you have `python` and `pip` installed and that they are in the PATH environment variable. Then run the command `pip install pandas datetime plotly`. Lastly, you will just have to run the command `python ./facebook_script.py %folder_name%`, replacing %folder_name% by the name of the Facebook download data folder you want to analyze. The results will be stored in a newly created folder `%folder_name%_results`.
+After cleaning the data I wanted to use, I stored it into Pandas Dataframes and then saved it into CSV files. Each of those CSV files can be found in the results folder **if** the corresponding JSON file was available in the Facebook Download Data folder. Those CSV files and their content are described in the annex. Note that I chose to construct Dataframes from the JSON files that I identified as pertinent based on the four Facebook accounts I had at my disposal. It is not an exhaustive list of the information you can retrieve from the Facebook Download Data and should be adapted to your case. Also, some keys I used to identify the presence of information have been selected in French, as the four profiles I had at my disposal were in French. This is the case for the Dataframes `see\_first`, `see\_less`, `blocked\_contacts`, `notifs\_pages`, `profiles\_visited` and `pages\_visited`, which will thereby only exist if the user’s Facebook language setting is French or if you adapted the key strings in the script before running it.
 
-## Dataframes created
+Each Dataframe created was exploited to create a visualization of the monthly count of actions performed by the user, per type of action (see next section). Some of the Dataframes have also been individually exploited to create more detailed visualizations, for example, the monthly count of exchanged messages in private conversations, per interlocutor (also see next section).
 
-After cleaning the data I wanted to use, I saved them into Dataframes and then into `CSV` files. Each of those CSV files can be found in the results folder **if** the corresponding JSON file was available in the Facebook download data folder. Those CSV files and their content are described at the end of this article. Note that I chose to construct Dataframes from the JSON files that I identified as pertinent based on the four Facebook accounts I had at my disposal. It is not an exhaustive list of the information you can retrieve from the Facebook download data and should be adapted to your case.
-
-Each Dataframe created was exploited to create a visualization of the monthly count of actions performed by the user, per type of action (see next section). Some of the Dataframes have also been individually exploited to create more detailed visualizations, for example the monthly count of exchanged messages in privates conversations, per interlocutor (also see next section).
-
-Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the CSV files with Excel, or the text will be displayed with encoding errors. To do so, follow these steps:
+You can visualize the content of the CSV files with Excel but be careful to choose `65001: Unicode (UTF8)` as “File origin” when opening the CSV files, or the text will be displayed with encoding errors. To do so, follow these steps:
 
 1. Open a clean data sheet in Excel.
     
@@ -126,7 +122,7 @@ Be careful to choose `65001: Unicode (UTF-8)` as "File origin" when opening the 
 
 ## Visualizations
 
-To navigate those visualizations, you can zoom in or out to adapt the time range displayed, and you can click on the actions displayed at the right of the graph to select the ones you want to display.
+Each visualization is saved in an HTML file and can be found in the results folder. When they are open in a browser, you can zoom in or out to adapt the time range displayed, and you can click on the actions listed at the right of the graph to select the ones you want to display.
 
 ### Monthly count of Facebook actions, per action (std between 1 and 10)
 
