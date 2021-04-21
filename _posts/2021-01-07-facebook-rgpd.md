@@ -187,7 +187,7 @@ What would be very beneficial from an investigative point of view would be to pe
 
 An illustration of how I imagined it is just below.
 
-<img src="{{site.github.url}}/assets/img/supertimeline.tif">
+<img src="{{site.github.url}}/assets/img/supertimeline.png">
 
 ---
 
