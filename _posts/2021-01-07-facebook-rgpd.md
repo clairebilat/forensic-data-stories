@@ -103,7 +103,7 @@ I wrote a Python script available [online](https://github.com/clairebilat/facebo
 
 # But what is this script useful for?
 
-After cleaning the data I wanted to use, I stored it into Pandas Dataframes and then saved it into CSV files. Each of those CSV files can be found in the results folder **if** the corresponding JSON file was available in the Facebook Download Data folder. Those CSV files and their content are described in the annex. Note that I chose to construct Dataframes from the JSON files that I identified as pertinent based on the four Facebook accounts I had at my disposal. It is not an exhaustive list of the information you can retrieve from the Facebook Download Data and should be adapted to your case. Also, some keys I used to identify the presence of information have been selected in French, as the four profiles I had at my disposal were in French. This is the case for the Dataframes `see\_first`, `see\_less`, `blocked\_contacts`, `notifs\_pages`, `profiles\_visited` and `pages\_visited`, which will thereby only exist if the user’s Facebook language setting is French or if you adapted the key strings in the script before running it.
+After cleaning the data I wanted to use, I stored it into Pandas Dataframes and then saved it into CSV files. Each of those CSV files can be found in the results folder **if** the corresponding JSON file was available in the Facebook Download Data folder. Those CSV files and their content are described in the annex. Note that I chose to construct Dataframes from the JSON files that I identified as pertinent based on the four Facebook accounts I had at my disposal. It is not an exhaustive list of the information you can retrieve from the Facebook Download Data and should be adapted to your case. Also, some keys I used to identify the presence of information have been selected in French, as the four profiles I had at my disposal were in French. This is the case for the Dataframes `see_first`, `see_less`, `blocked_contacts`, `notifs_pages`, `profiles_visited` and `pages_visited`, which will thereby only exist if the user’s Facebook language setting is French or if you adapted the key strings in the script before running it.
 
 Each Dataframe created was exploited to create a visualization of the monthly count of actions performed by the user, per type of action (see next section). Some of the Dataframes have also been individually exploited to create more detailed visualizations, for example, the monthly count of exchanged messages in private conversations, per interlocutor (also see next section).
 
@@ -120,65 +120,72 @@ You can visualize the content of the CSV files with Excel but be careful to choo
     <img src="{{site.github.url}}/assets/img/excel2.PNG">
 
 
-## Visualizations
+# Visualizations
 
 Each visualization is saved in an HTML file and can be found in the results folder. When they are open in a browser, you can zoom in or out to adapt the time range displayed, and you can click on the actions listed at the right of the graph to select the ones you want to display.
 
-### Monthly count of Facebook actions, per action (std between 1 and 10)
+## Monthly count of Facebook actions, per action (std lower than 10)
 
-I chose to limit the visualization to the actions showing a standard deviation of monthly count between 1 and 10 so that the visual comparison would be easier. As those are the regular actions performed by the user that are not performed on a daily basis (like adding new friends or liking new pages in my case), it helps to gain a general understanding of the usage of the Facebook profile.
+This graph (`month_count_actions_small-std.html`) shows the count of Facebook actions the user performed per month, and you can filter the different actions displayed. I chose to limit the visualization to the actions showing a standard deviation of monthly count lower than 10 so that the visual comparison would be easier. As those are the actions performed regularly by the user (like adding new friends or liking new pages in my case), it helps to gain a general understanding of the usage of the Facebook profile.
 
 {% include month_count_actions_1-std-10.html %}
 
-In my data, you can for example see that I liked pages mostly between 2016 and 2018, with a high peak in January 2017 where I liked 52 pages. Most of the friend requests I rejected took place between the end of 2015 and mid-2016. I don't really explain those observations but they could still be of value for investigators, as it helps to target some unusual activity. Some precautions have to be taken when interpreting those data. For example, my `poking` activity only lasts until the end of 2018. It can easily be explained by the fact that Facebook removed this functionality at the time. 
+By navigating it, you can see that I liked pages (action `liked_pages`) mostly between 2016 and 2018, with a high peak in January 2017 where I liked 52 pages. I do not really explain this observation, but it could still be of value for investigators, as it helps to target some unusual activity and describe what is considered as usual for a user.
 
-### Monthly count of Facebook actions, per action (std higher than 10)
+Most of the friend requests I rejected (action `rejected_friend_requests`) took place between the end of 2015 and mid-2016, but the removal of friends (action `removed_friends`) took place mostly between 2011 and 2013. One hypothesis is that maybe I was accepting every request before 2014 and was removing the ones I was not so sure about just a little bit later, when as from 2015, I started rejecting the friendship requests directly.
 
-Here are illustrated the actions showing a standard deviation of monthly count higher than 10. Those are the actions performed on a daily basis by the user, and any irregularities in them can be of interest.
+Some precautions have to be taken when interpreting those data. For example, my “poking” activity (`pokes` action) only lasts until the end of 2018. It can easily be explained by the fact that Facebook removed this functionality at the time.
+
+## Monthly count of Facebook actions, per action (std higher than 10)
+
+This graph (`month_count_actions_high-std.html`) shows the count of Facebook actions the user performed per month, and you can filter the different actions displayed. I chose to limit the visualization to the actions showing a standard deviation of monthly count higher than 10 to illustrate the unregular activities of the user.
 
 {% include month_count_actions_10-std.html %}
 
-Many observations can be made. As you can see when displaying the `msg_requests` action, I have a big peak of message requests in September 2018, and almost none the other months. I checked my inbox out of curiosity, and it turns out that, in September 2018, people I did not know added me in a group conversation. Before I had the time to decline the invitation, they sent almost 500 messages in this conversation, and then deleted me from it. That explains this anomaly. When displaying `archived_threads`, you can see that I also have enormous peaks between June and September 2017 and almost nothing in the other months. During this period, I actually quit the associative role that I had since January 2017 and archived the conservations I had with my colleagues, also explaining this anomaly. As you can see, I easily targeted unusual activity based on the visualization and could rapidly check in the data the cause of this activity, which could be helpful to investigators.
+Many observations can be made. As you can see when displaying the `msg_requests` action, I have a big peak of message requests in September 2018, and almost none the other months. I checked my inbox out of curiosity, and it turns out that, in September 2018, people I did not know added me in a group conversation. Before I had the time to decline the invitation, they sent almost 500 messages in this conversation, and then deleted me from it. That explains this anomaly.
+
+When displaying `archived_threads`, you can see that I also have enormous peaks of archived conversations between June and September 2017 and almost nothing in the other months. During this period, I actually quit the associative role that I had since January 2017 and archived the conservations I had with my colleagues, also explaining this anomaly.
+
+As you can see, I easily targeted unusual activity based on the visualization and could rapidly check in the data the cause of this activity, which could be helpful to investigators.
 
 
-### Monthly count of exchanged messages in private conversations, per interlocutor (total count in top10 or one month count in top10)
+## Monthly count of exchanged messages in private conversations, per interlocutor (total count in top10 or max month count in top10)
 
-Here are illustrated the monthly count of messages I exchanged in private conversations (meaning in conversations with only one other person than me). I chose to limit the interlocutors represented to the 10 with whom I exchanged the most messages in total, and/or the 10 with whom I exchanged the most messages in one month. I replaced the names of my interlocutors with numbers for obvious reasons.
+This graph (`month_count_inbox_private.html`) shows the count of Facebook messages the user exchanged per month in private conversations (meaning in conversations with only one other person than the user), per interlocutor, and you can filter the different interlocutors displayed. I chose to limit the interlocutors represented to the 10 with whom the user exchanged the most messages in total, and/or the 10 with whom the user exchanged the most messages in one month, so that the visual comparison would be easier. The graph displayed here is an anonymized version of the graph I obtained with my data.
 
 {% include inbox_conv_anonymized.html %}
 
-It is a bit difficult to make conclusions based on the anonymized version of this visualization, but I encourage you to do the same with your data. Also, please be careful to note that the user "Utilisateur de Facebook" in French (probably "Facebook user" in English) often appears in this graph but is only an aggregation of every conversation where the interlocutor deleted his profile, making his name unavailable. This visualization helps quickly identify the people often contacted by the user (with Facebook) and could help target the next person to interview in an investigation.
+It is a bit difficult to make conclusions based on the anonymized version of this visualization, but I encourage you to do the same with your data. Also, please be careful to note that the user “Utilisateur de Facebook” in French (probably “Facebook user” in English) often appears in this graph but is only an aggregation of every conversation where the interlocutor deleted his profile, making his name unavailable. This visualization helps quickly identify the people often contacted (with Facebook Messenger) by the user and could help target the next person to interview in an investigation.
 
-### Monthly count of exchanged messages in group conversations, per interlocutor (total count in top10 or one month count in top10)
+## Monthly count of exchanged messages in group conversations, per interlocutor (total count in top10 or max month count in top10)
 
-The same has been performed for group conversations.
+The same has been performed for group conversations (meaning in conversations with more than one other person than the user). You can also filter the different groups of interlocutors displayed on the graph (`month_count_inbox_group.html`).
 
 {% include inbox_group_anonymized.html %}
 
-We can see that I have almost no group conversations, apart from the period of January to September 2017. Again, those conversations are related to the associative role I had at the time and explain this activity. Also, it shows that unusual activity can easily be targeted based on the visualization and can rapidly be checked in the data.
+We can see that I have almost no group conversations, apart from the period of January to September 2017. Again, those conversations are related to the associative role I had at the time and explain this activity. Based on this visualization, unusual activity can easily be targeted and can rapidly be checked in the data. Also, it helps again to quickly identify the people often contacted (with Facebook Messenger) by the user and could help target the next person to interview in an investigation.
 
-### Monthly count of posted messages in groups, per group (total count in top10)
+## Other graphs
 
-{% include groups_comment_anonymized.html %}
+You will find two other graphs in the results folder, that I will not discuss in detail as the anonymized versions of mine are not as clear as the other visualizations I discussed.
 
-### Monthly count of searched items, per item (total count in top10 or one month in top10)
+The graph `month_count_groups_comments.html` illustrates the monthly count of messages the user posted in groups, per group, for the groups with a total count in the top 10. In my opinion, it could be useful to detect the groups where the user is the most active and filter it based on the group name. Some of the groups could be linked to topics of interest for the investigation, and the extent of the user’s activity on them would be easily displayed on this graph.
 
-{% include searches_anon.html %}
-
-What we can observe is for example the 9th searched term being regularly searched for a really long period of time.
-
+The graph `month_count_searches.html` illustrates the monthly count of searched items, per item, for the top 10 items that have been searched the most in total and/or in one month. The profiles, groups, or pages being the most frequently searched by the user can be observed on this graph and can also help to reconstruct the user’s interests.
 
 # Conclusion
 
-I hope I could convince you that such a script is easy to implement and of added value in an investigation. Moreover, some Dataframes I cleaned based on the JSON files I had are intrinsically pertinent and should manually be reviewed, for example the list of apps linked to the account, the list of events joined, or the list of pages administred by the user (see at the end of this article for an exhaustive list of every Dataframe created with my script). 
+I hope I could convince you that such a script is easy to implement and of added value in an investigation. It is fast and produces useful visualizations from which it is easy to extract information of interest. Moreover, some Dataframes I cleaned based on the JSON files I had are intrinsically pertinent and should manually be reviewed, for example, the list of apps linked to the account, the list of events joined, or the list of pages administered by the user (see at the end of this article for an exhaustive list of every Dataframe created with my script).
 
 ---
 
 # Prospects
 
-What I initially wanted to do but had to let go because of the problems raised in the Preprocessing Section was to create a timeline of actions per friend, combining many sources of information like when did the user and the friend connected, their inbox, but also the comments they posted on each other posts, the events they invited each other at, etc. It was too difficult extracting the friend's name from many of those sources so I limited myself to the sources presented in the Visualization Section.
+What I initially wanted to do but had to let go because of the problems raised in the _How did you do it?_ Section was to create a timeline of actions per friend, combining many sources of information like when did the user and the friend connected, their inbox, but also the comments they posted on each other’s posts, the events they invited each other at, etc. You could filter by action, by friend, and by time period.
 
-What would be very beneficial from an investigative point of view would be to perform some Natural Language Processing on the textual sources like the inbox, the comments, etc., to begin to know better the topics of interest and the vocabulary/intentions of the user. Also, this could help narrow down the friends with whom the user actually have conversations/activities of interest, which would also be useful.
+What would be very beneficial from an investigative point of view would be to perform some Natural Language Processing on the textual sources like the inbox, the comments, etc., to begin to know better the topics of interest and the vocabulary/intentions of the user. Also, this could help narrow down the friends with whom the user actually has conversations/activities of interest, which would also be useful. This information could be added to the supertimeline I mentioned, so that when you click on a certain portion of the visualization, the details related to it could appear, for example, the detected topics of conversation.
+
+An illustration of how I imagined it is just below.
 
 
 ---
