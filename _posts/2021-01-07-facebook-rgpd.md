@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Facebook GDPR Timeline in a criminal investigation
-subtitle: A small processing and visualization of Facebook-GDPR Database
+subtitle: Processing and visualization of the Facebook Download Data
 gh-repo: clairebilat/forensic-data-stories
 gh-badge: [star, follow]
 tags: [Facebook, GDPR, timeline]
@@ -10,17 +10,12 @@ comments: true
 
 # Prologue
 
-The GDPR law (General Data Protection Regulation) is "a regulation in EU law on data protection and privacy in the European Union and the European Economic Area. The GDPR's primary aim is to give individuals control over their personal data (...). Data subjects have the right to request a portable copy of the data collected by a controller in a common format, and the right to have their data erased under certain circumstances." [Wikipedia](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation)
+ am a student who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at the University of Lausanne. As part of this, I had to choose a personal practical lab theme for which I would take time to practice my theoretical knowledge, produce something useful, and maybe publish my results. Recently out of an internship in an Office of Police where I found myself having to review manually some Facebook profiles, I chose to try and write a script automating the processing and output of some basic visualizations of Facebook GDPR data to help investigators grab a general idea of one’s Facebook profile and its content without having to put too much work into it. That way, they can have leads about which people are the most involved in the Facebook activity of the user, and to which extent the user is active on Facebook. Unusual activity will also hopefully be easily detected based on the visualizations produced. That information can be used to orient the investigation and help prioritize the actions taken.
 
-It is in this context that Facebook makes available all the data collected on a user via the interface of his account settings, and it is this data that I decided to analyze.
+# GDPR what?
+The GDPR law (General Data Protection Regulation) is “a regulation in EU law on data protection and privacy in the European Union and the European Economic Area. The GDPR’s primary aim is to give individuals control over their personal data (…). Data subjects have the right to request a portable copy of the data collected by a controller in a common format, and the right to have their data erased under certain circumstances.” [Wikipedia](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation)
 
-## About me
-
-I am a student who decided to complete a [master's degree in Digital Investigation and Identification](https://www.unil.ch/esc/fr/home/menuinst/enseignement/masters/msc-investigation-numerique.html) at the University of Lausanne. As part of this, I had to choose a personal practical lab theme for which I would take time to practice my theoretical knowledge, produce something useful, and maybe publish my results. After the success my colleagues and I had with our _Eat safely in Chicago_ project performed as part of the EPFL course intituled "Applied Data Analysis" (you will find our amazing results in [the first post of this blog](https://clairebilat.github.io/forensic-data-stories/2019-12-20-food-chicago/)), I could not refrain myself to make everything about data analysis once again. Recently out of an internship in an Office of Police where I found myself having to review manually some Facebook profiles, I chose to try and write a script automating the processing and output of some basic visualizations of Facebook GDPR data to help investigators grab a general idea of one's Facebook profile and its content without having to put too much work into it. 
-
-## About the databases used
-
-The dataset used is the one I downloaded from Facebook containing a copy of my information. You can find yours following these steps :
+It is in this context that Facebook makes available all the data collected on a user via the interface of his account settings, and it is this data that I decided to analyze. You can find yours following these steps:
 
 1. First, go to [Facebook](https://www.facebook.com/) and log in. Then, click on the `Account` button.
     
@@ -38,78 +33,73 @@ The dataset used is the one I downloaded from Facebook containing a copy of my i
     
     <img src="{{site.github.url}}/assets/img/tuto4.PNG">
     
-4. Go to `Download your information`.
+5. Go to `Download your information`.
     
     <img src="{{site.github.url}}/assets/img/tuto5.PNG">
     
-5. Choose `Request copy`, adjust your parameters (I personally chose the JSON format with a low quality of media), and click on `Create File`.
+6. Choose `Request copy`, adjust your parameters, and click on `Create File`. Note that to use my script, you must select the JSON file format. Also, if you do not need the media in high quality (for many data analysis implementations you will just not need the media at all), consider selecting the lowest quality, as otherwise, your Facebook Download Data will become very huge.
     
     <img src="{{site.github.url}}/assets/img/tuto6.PNG">
     
+7. When the file is processed, you will receive an email and a Facebook notification, and the file will be available in the `Available copies` section just right to the `Request copy` section. You can then just download it on your computer, and you are all set.
 
-## About the purpose of this project
+The downloaded folder contains many folders that contain different JSON files with which you can reconstruct every action you ever performed on your Facebook account. Note that if you never used a functionality offered by Facebook (let say you never “poked” anyone for example), the corresponding JSON file/folder will be absent from your Facebook Download Data and it will not be present as an empty file/folder. Thus, it is impossible to exhaustively construct a list of every possible file you may
+encounter in your Facebook Download Data.
 
+# Has it already been done?
 
-The purpose here is to write a script automating the processing and output of some basic visualizations of Facebook GDPR data to help investigators grab a general idea of one's Facebook profile and its content without having to put too much work into it. That way, they can have leads about which people are the most involved in the Facebook activity of the user, and to which extent the user is active on Facebook. That information can be used to orient the investigation and help prioritize the actions taken.
+Many people have done similar projects (but it is a real pain trying to find them online because of all the Facebook scandals that pop when searching form terms like Facebook data analysis… Quick tip, try with keywords like “Analyze Your Personal Facebook Data” and exclude some keywords like “Analytics” and it will be a little bit better). Here is a list of some of the projects I found that use Python (which is the language I selected for my project):
 
-
-# Litterature review (or how what I wanted to do had already be done but I did it anyway)
-
-Many people have done similar projects (but it is a real pain trying to find them online because of all the Facebook scandals that pop when searching form terms like _Facebook data analysis_... Quick tip, try with keywords like "Analyze Your Personal Facebook Data" and exclude some keywords like "Analytics" and it will be a little bit better).
-
-1. [How much do you post](https://www.dataquest.io/blog/analyze-facebook-data-python/)
+1. Do you post too much? Analyze your personal Facebook data with Python [(Charlie Custer, Dataquest, 28.08.2020)](https://www.dataquest.io/blog/analyze-facebook-data-python/)
     
-    This is a great tutorial that is surprisingly easy to follow, explaining in well-illustrated steps how to plot your monthly post count. It takes five minutes to perform and is a really great way to introduce you to the structure of the data Facebook offers.
+    This is a great tutorial that is surprisingly easy to follow, explaining in well-illustrated steps how to plot your monthly post count using Pandas and Matplotlib (those are Python libraries containing useful functions for data analysis). It takes five minutes to perform and is a really great way to introduce you to the structure of the data Facebook offers. Here, they limit themselves to the analysis of the user’s posts content.
     
-2. [Natural Language Processing](https://towardsdatascience.com/mapping-my-facebook-data-part-1-simple-nlp-98ce41f7f27d)
+2. Mapping My Facebook Data – Part 1: simple NLP [(Hunter Heindenreich, towardsdatascience, 21.08.2018)](https://towardsdatascience.com/mapping-my-facebook-data-part-1-simple-nlp-98ce41f7f27d)
     
-    This article explains how to discover what words you use most, and basic stats about your data. It is out of the scope of my project but is 100% considered as a prospect.
+    This article explains how to discover what words you use most, and basic stats about your data. It is out of the scope of my project but is 100% considered as a prospect. It is also quite short and easy to follow. They aggregate various sources of information, like the inbox content, the user’s posts content, and the user’s comments. However, the analyzer they used (from the library NLTK) only works for English sentences.
     
-3. [Facebook Messenger Data](https://www.youtube.com/watch?v=z9W2cvmFPuA)
+3. Livestream: Analyzing Facebook Messenger Data with Python [(Ian Freed, Codecademy, 01.11.2018)](https://www.youtube.com/watch?v=z9W2cvmFPuA)
     
-    This live stream replay is a video tutorial on how to explore your Facebook Messenger to compare the friends you contacted most and at which frequency. What is nice is that you can follow him coding for almost one hour, which can be easier for beginners.
+    If the two previous articles were not detailed enough and you need a step-by-step video-commented tutorial, this will be your life changer. They limit themselves to the analysis of the inbox content, but every step is illustrated and commented, so if you are a complete beginner to data analysis, I highly recommend trying to follow this 1h-tutorial. They perform sentiment analysis on the exchanged messages (this is used to determine whether the conversation has a more positive or negative polarity - basically, whether the topic was happy or sad), and study the variation of polarity over time. They use libraries like Pandas and Matplotlib. However, the analyzer they used is the same as the one used in the previous article, so it only works for English sentences.
     
-4. [MOOC course](https://www.mooc-list.com/course/analyzing-your-facebook-data-python-leada)
+4. Analyzing your Facebook Data in Python [(Leada)](https://www.mooc-list.com/course/analyzing-your-facebook-data-python-leada)
     
-    This MOOC course is supposed to guide you through analyzing your Facebook data but was not available at the time I tried to enroll.
+    This supposedly is a MOOC course guiding through a series of interesting analysis on your Facebook Download Data using tools like Pandas, Scipy, and Plotly. However, it was not available at the time I tried to enroll so I could not check the actual content of this course.
 
-# Preprocessing
+# How did I do it?
 
-This part of my project is not the most thrilling so I will not go over every detail of the preprocessing but only mention a few ones that could maybe help the reader to gain a better global comprehension of the project. Please refer to **[my Python script](https://github.com/clairebilat/facebook-GDPR)** if you have an insatiable curiosity about it.
+I chose to use the libraries Pandas and Plotly. Explaining how exactly I implemented my script is not the purpose of this article and is not the most thrilling part so I will not go over every detail of it. I will however mention a few ones that could maybe help the reader to gain a better global comprehension of the project and illustrate the difficulties I encountered.
 
-This step definitely was the most painful. First, **there is no official documentation available about the organization of the Facebook download data**, and you just have to deduce it by looking at what you have in front of you. To this day, there are still some files for which I could not extrapolate the meaning of the data they contain. And then, as you think you have a good idea of what the data represents and you want to use it, you will face the next problem. Indeed, every folder that the Facebook download data contains shows a different structure and it is **mostly nested sub-columns in each row** that are still in JSON format. In consequence, I had to manually review each folder individually and study its structure to extract some useful content, and that has not been automated. 
-Also, the **Facebook download data is incorrectly encoded**. The original data is UTF-8 encoded but was decoded as Latin-1 (no, it's not just me going crazy, [stackoverflow talks about it](https://stackoverflow.com/questions/50008296/facebook-json-badly-encoded)), which I had to take into account each time I wanted to interpret textual values.
-Last but not least, **the data is not well tokenized** and most of them are just strings describing the action resulting in this entry. As an example, I can cite the file containing information about group membership activity (search for the file `groups/your_group_membership_activity.json`). The entries it contains can be at least two of the following strings :
+Basically, before being able to analyze the data, I had to preprocess it and reformat it so that the structure would be coherent between every source I was planning on using. This step definitely was the most painful. First, there is no official documentation available about the organization of the Facebook Download Data, and you just have to deduce what the data represents by looking at what you have in front of you. To this day, there are still some files for which I could not extrapolate the meaning of the data they contain. And then, as you think you have a good idea of what the data represents and you want to use it, you will face the next problem. Indeed, every folder that the Facebook Download Data contains shows a different structure and it is mostly nested sub-columns in each row that are still in JSON format. In consequence, I had to manually review each folder individually and study its structure to extract some useful content, and that cannot be automated.
 
-1. "You became a member of group _xy_" 
+Also, the textual information in the Facebook Download Data is incorrectly encoded. The original data is UTF-8 encoded but was decoded as Latin-1 (no, it is not just me going crazy, [_StackOverflow_ talks about it](https://stackoverflow.com/questions/50008296/facebook-json-badly-encoded)), which I had to take into account each time I wanted to interpret textual values.
+
+Last but not least, the data is not well tokenized and most of them are just textual strings describing the action resulting in this entry. As an example, I can cite the file containing information about group membership activity (search for the file `groups/your\_group\_membership\_activity.json`). The entries it contains can be at least two of the following strings:
+
+
+1. "You became a member of group _xy_" (in French "Vous êtes devenue membre de _xy_").
     
-    (in French "Vous êtes devenue membre de _xy_").
-    
-2. "You stopped being a member of group _xy_" 
-    
-    (in French "Vous avez arrêté d'être membre de _xy_").
+2. "You stopped being a member of group _xy_" (in French "Vous avez arrêté d'être membre de _xy_").
 
 There are three problems with that :
 
-1. You have to manually check every type of entry in the file and apply some regular expressions searches to identify exactly the action corresponding to the entry ("quit" or "joined").
+1. You have to manually check every type of entry in the file and apply some regular expressions searches to identify exactly the action corresponding to the entry ("quit" or "joined", and the name of the group).
     
-2. It is language-dependent, as the entry is expressed in the language chosen by the user at the time.
+2. It is language-dependent, as the entry is expressed in the language chosen by the user at the time (so you will probably have to check that in the JSON file containing information about the user’s settings).
     
 3. Depending on the language (and it is the case in French), it is even gender-dependent, so the string will not be the same depending on the individual settings of the user.
 
-It becomes worse (and almost is a joke at this point), as **the string itself changes over time depending on the version of Facebook** and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support, where I found two possible strings describing the anonymous signaling of a publication :
+It becomes worse, as the string itself changes over time depending on the version of Facebook and the conventions they are applying at the time, an example being the entries in the file recording the correspondences with Facebook Support (search for the file `other\_activity/support\_correspondences.json`), where I found two possible strings describing the anonymous signaling of a publication :
 
-1. "You have anonymously signaled the publication of _xy_ for _abc_ reasons"
+1. "You have anonymously signaled the publication of _xy_ for _abc_ reasons" (in French "Vous avez signalé anonymement la publication de _xy_ pour _abc_").
     
-    (in French "Vous avez signalé anonymement la publication de _xy_ pour _abc_").
-    
-2. "You have signaled the publication of _xy_ in an anonymous way for _abc_ reasons"
-    
-    (in French "Vous avez signalé la publication de _xy_ de manière anonyme pour _abc_").
+2. "You have signaled the publication of _xy_ in an anonymous way for _abc_ reasons" (in French "Vous avez signalé la publication de _xy_ de manière anonyme pour _abc_").
 
-In consequence, the regular expressions used have to be really robust in order to work on every string version of the action one is trying to tokenize.
+In consequence, the regular expressions used must be really robust in order to work on every string version of the action one is trying to tokenize.
 
-To conclude, the high variability of formats encountered in the Facebook download data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. The purpose here being to offer a general understanding of the activity one has on Facebook, I have decided to not lose myself in the management of every case I ran into and did not implement any regular expressions, as it too tightly depends on the account settings of the investigated Facebook user. 
+To conclude, the high variability of formats encountered in the Facebook Download Data makes it difficult to dig deep in an automated way and must be adapted case-by-case to achieve a high granularity of details. The purpose here being to offer a general understanding of the activity one has on Facebook, I decided to not lose myself in the management of every case I ran into and did not implement any regular expressions, as it too tightly depends on the account settings of the investigated Facebook user.
+
+I wrote a Python script available [online](https://github.com/clairebilat/facebook-GDPR). Put the file facebook_script.py in the folder where you store your Facebook Download Data folder and open this destination in a terminal. Make sure you have Python and Pip installed and that they are in the PATH environment variable. Then run the command _pip install pandas datetime plotly_. Lastly, you will just have to run the command _python ./facebook\_script.py %folder\_name%_, replacing `%folder\_name%` by the name of the Facebook Download Data folder you want to analyze. The results will be stored in a newly created folder `%folder\_name%\_results`.
 
 # Results
 
