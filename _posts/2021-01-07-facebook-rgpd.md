@@ -187,11 +187,12 @@ What would be very beneficial from an investigative point of view would be to pe
 
 An illustration of how I imagined it is just below.
 
+<img src="{{site.github.url}}/assets/img/supertimeline.tif">
 
 ---
 
 
-# Description of the `CSV` files created
+# Annexes: description of the CSV files created with the script
 
 1. `apps_and_websites`
     
@@ -199,11 +200,11 @@ An illustration of how I imagined it is just below.
     
 2. `archived_threads`
     
-    This Dataframe contains the group discussions that the user has left. It has not been used here for independent visualizations as my account did not have many different deleted group conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
+    This Dataframe contains the discussions that the user has left. It has not been used here for independent visualizations as my account did not have many different deleted conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
     
 3. `comments_in_groups`
     
-    This Dataframe contains every action (post or comment) the user performed in groups. The group name is already tokenized and has been exploited to produce a visualization of the monthly post/comment count per group (see next section). This can be used to see if the user is very active in some groups that could be related to specific activities (illegal sale, harassment, ...). 
+    This Dataframe contains every post or comment the user performed in groups. The group name is already tokenized and has been exploited to produce a visualization of the monthly post/comment count per group. This can be used to see if the user is very active in some groups that could be related to specific activities (illegal sale, harassment, ...). 
     
 4. `comments`
     
@@ -215,15 +216,15 @@ An illustration of how I imagined it is just below.
     
 6. `filtered_threads`
     
-    These Dataframe contains message requests that have been declined by the user. It has not been used here for independent visualizations as my account did not have many different deleted group conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
+    This Dataframe contains message requests that have been declined by the user. It has not been used here for independent visualizations as my account did not have many different filtered conversations, but if the general overview of the account activity shows that this Dataframe is highly populated, the script could be adapted to take that into account.
     
 7. `followed_pages`
     
-    This Dataframe contains the pages that the user follows.
+    This Dataframe contains the pages that the user follows (note that _follow_ is not the same as _like_, give it a try on Facebook to understand the difference).
     
 8. `following`
     
-    This Dataframe contains the people that the user follows.
+    This Dataframe contains the people that the user follows (note that _follow_ is not the same as _being friend_, give it a try on Facebook to understand the difference).
     
 9. `friends`
     
@@ -239,26 +240,26 @@ An illustration of how I imagined it is just below.
     
 12. `inbox`
     
-    This Dataframe contains the messages that the user exchanged in conversations. Two visualizations have been made based on this Dataframe; one illustrating the monthly exchanged message count per group conversation and the other one per private conversations (see next section).
+    This Dataframe contains the messages that the user exchanged in conversations. Two visualizations have been made based on this Dataframe; one illustrating the monthly exchanged messages count per group conversations and the other one per private conversations.
     
 13. `liked_pages`
     
     This Dataframe contains information about the pages the user has liked. Those have forensic value to check if the user expressed interest in specific topics regarding the investigation and should be manually reviewed by the investigator.
     
 14. `liked_posts_and_comments`
-    This Dataframe contains every Facebook reaction (HAHA, LIKE, LOVE, WOW, etc.) the user selected on various posts. 
+    This Dataframe contains every Facebook reaction (HAHA, LIKE, LOVE, WOW, etc.) the user selected on various posts and comments.
     
 15. `msg_requests`
     
-    This Dataframe contains every message sent as a request from people that were not on the user's friends list. 
+    This Dataframe contains every message sent as a request from people that were not on the user's friends list. Once accepted, they migrate to the inbox. If declined, they migrate to the filtered_threads.
     
 16. `people`
     
-    To be honest, I don't really know what represents this Dataframe...
+    To be honest, I do not really know what represents the data in the JSON I used to construct this Dataframe. More experimentations would be required to know for sure what action populates the JSON file I extracted these data from.
     
 17. `pokes`
     
-    This Dataframe contains every poke exchanged by the user. Please note that `poking` is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user suddenly stops.
+    This Dataframe contains every poke exchanged by the user. Please note that “poking” is a functionality that did not exist on Facebook for very long and it can explain why the "poke activity" of a user suddenly stops.
     
 18. `received_friend_requests`
     
@@ -266,19 +267,19 @@ An illustration of how I imagined it is just below.
     
 19. `rejected_friend_requests`
     
-    This Dataframe contains the friend requests the user rejected. 
+    This Dataframe contains the friend requests the user rejected.
     
 20. `removed_friends`
     
-    This Dataframe contains the friend the user removed. 
+    This Dataframe contains the friends the user removed. 
     
 21. `search_history`
     
-    This Dataframe contains every search performed by the Facebook user. I have exploited this to plot the monthly count of searches per typed text (see next section).
+    This Dataframe contains every search performed by the Facebook user. I have exploited this to plot the monthly count of searches per item searched.
     
 22. `sent_friend_requests`
     
-    This Dataframe contains the friend requests the user sent. 
+    This Dataframe contains the friend requests the user sent that have not been accepted or rejected yet. 
     
 23. `support`
     
@@ -288,23 +289,31 @@ An illustration of how I imagined it is just below.
     
     This Dataframe contains every page the user unfollowed.
     
-25. `visites_de_profil`
+25. `profiles_visited`
     
-    To be honest, I don't really know what represents this Dataframe...
+    To be honest, I do not really know what represents this Dataframe, as mine is only populated with less than 10 entries and I definitely visited more profiles than that. More experimentations would be required to know for sure what action populates the JSON file I extracted these data from.
     
-26. `visites_sur_la_page`
+26. `pages_visited`
     
-    To be honest, I don't really know what represents this Dataframe...
+    To be honest, I do not really know what represents this Dataframe, as mine is only populated with less than 10 entries and I definitely visited more pages than that. More experimentations would be required to know for sure what action populates the JSON file I extracted these data from.
      
-27. `voir_en_premier`
+27. `see_first`
     
     This Dataframe contains every profile the user chose to see first in his feed. This could be of interest depending on the case and should be manually reviewed by the investigator.
     
-28. `voir_moins`
+28. `see_less`
     
     This Dataframe contains every profile the user chose to see last in his feed. This could be of interest depending on the case and should be manually reviewed by the investigator.
     
 29. `your_pages`
     
     This Dataframe contains every page where the user is an administrator. That has high forensic value and should be manually reviewed by the investigator.
+    
+    30. `blocked_contacts`and `notifs_pages`
+    Those are related to some settings of the user’s profile, but I did not encounter them in my data so I could not extrapolate their meaning.
+
+Note that each Dataframe could be of forensic value depending on the context and the tips I give are not exhaustive.
+
+
+
     
