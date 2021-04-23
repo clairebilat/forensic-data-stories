@@ -309,7 +309,7 @@ An illustration of how I imagined it is just below.
     
     This Dataframe contains every page where the user is an administrator. That has high forensic value and should be manually reviewed by the investigator.
     
-    30. `blocked_contacts`and `notifs_pages`
+30. `blocked_contacts`and `notifs_pages`
     Those are related to some settings of the user’s profile, but I did not encounter them in my data so I could not extrapolate their meaning.
 
 Note that each Dataframe could be of forensic value depending on the context and the tips I give are not exhaustive.
